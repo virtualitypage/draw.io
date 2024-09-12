@@ -550,6 +550,18 @@
             <mxPoint x="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="e4OIGDZSl6DKN_9kL9c8-123" value="Knowhow" style="rounded=1;fillColor=#23445D;gradientColor=none;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontFamily=Tahoma;fontSize=14" vertex="1" parent="1">
+          <mxGeometry x="970" y="590" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e4OIGDZSl6DKN_9kL9c8-124" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;strokeWidth=2;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="41" target="e4OIGDZSl6DKN_9kL9c8-123">
+          <mxGeometry x="-23" y="135.5" width="100" height="100" as="geometry">
+            <mxPoint x="980" y="360" as="sourcePoint" />
+            <mxPoint x="980" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="950" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
