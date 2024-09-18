@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.14">
   <diagram name="Page-1" id="4bd5d27a-524c-7e24-5d5f-89a86ee4fca1">
-    <mxGraphModel dx="1885" dy="-579" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1414" dy="-632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -534,6 +534,29 @@
         </mxCell>
         <mxCell id="pt-I9l3c0E-_gEPRh6XU-7" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.window;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;rotation=0;container=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="2375.03" width="80" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="pt-I9l3c0E-_gEPRh6XU-8" value="非常食" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" collapsed="1" parent="1">
+          <mxGeometry x="880" y="2354" width="56.75" height="21.03" as="geometry" />
+        </mxCell>
+        <mxCell id="pt-I9l3c0E-_gEPRh6XU-9" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=1.006;exitY=0.496;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" target="pt-I9l3c0E-_gEPRh6XU-8" parent="1" source="pt-I9l3c0E-_gEPRh6XU-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="859" y="2370" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="870" y="2370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pt-I9l3c0E-_gEPRh6XU-11" value="PC" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" collapsed="1" parent="1">
+          <mxGeometry x="940.59" y="2130.56" width="48" height="20.44" as="geometry" />
+        </mxCell>
+        <mxCell id="pt-I9l3c0E-_gEPRh6XU-12" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.507;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="35DfSOJFgixrfVCFVsKe-241" source="pt-I9l3c0E-_gEPRh6XU-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="989.5" y="2158.53" as="sourcePoint" />
+            <mxPoint x="1000" y="2160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="979.5" y="2148.53" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
