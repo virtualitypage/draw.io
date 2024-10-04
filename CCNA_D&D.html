@@ -1,0 +1,3301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCNA ドラッグ＆ドロップ問題集</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .left {
+      text-align: center;
+    }
+    .left, .right {
+      width: 40%;
+    }
+    .draggable {
+      margin: 10px;
+      padding: 10px;
+      background-color: #ccffff;
+      cursor: pointer;
+      border: 1px solid black;
+    }
+    .dropzone {
+      margin: 10px;
+      padding: 10px;
+      background-color: #ffd966;
+      border: 2px solid rgb(0 0 0);
+      min-height: 150px;
+      position: relative;
+    }
+    .slot {
+      margin: 5px 0;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid rgb(0 0 0);
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* .dropzone:hover {
+      background-color: lightgreen;
+    } */
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+      display: none;
+    }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+    .navigation {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="resetBtn">リセット</button> <!-- リセットボタン -->
+  <div class="navigation">
+    <button id="prevBtn">前へ</button>
+    <button id="nextBtn">次へ</button>
+  </div>
+  <div id="page1" class="page active">
+    <h2>問題 6 ネットワークアーキテクチャの特性を左から右のアーキテクチャのタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left1">
+        <div class="draggable" draggable="true" id="item6_1" data-category="collapsedCore">単一のデバイスがコアとディストリビューション層を処理します</div>
+        <div class="draggable" draggable="true" id="item6_2" data-category="ThreeTier">ネットワークの可用性を強化します</div>
+        <div class="draggable" draggable="true" id="item6_3" data-category="collapsedCore">他のオプションよりもコスト効率が高い</div>
+        <div class="draggable" draggable="true" id="item6_4" data-category="collapsedCore">小規模なネットワーク設計に最適</div>
+        <div class="draggable" draggable="true" id="item6_5" data-category="ThreeTier">別々のデバイスがコアとディストリビューション層を処理します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="collapsedCoreZone" data-category="collapsedCore">コラプスドコア
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="ThreeTierZone" data-category="ThreeTier">スリーティア
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page2" class="page">
+    <h2>問題 7 図を参照してください。左側の学習したプレフィックスを、右側の学習元の優先ルート方法にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left2">
+        <div class="draggable" draggable="true" id="item7_1" data-category="EIGRP">172.16.2.0/24</div>
+        <div class="draggable" draggable="true" id="item7_2" data-category="static">192.168.1.0/24</div>
+        <div class="draggable" draggable="true" id="item7_3" data-category="OSPF">192.168.2.0/24</div>
+        <div class="draggable" draggable="true" id="item7_4" data-category="RIP">207.165.200.244/30</div>
+        <div class="draggable" draggable="true" id="item7_5" data-category="">207.165.200.248/30</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="staticZone" data-category="static">static
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="EIGRPZone" data-category="EIGRP">EIGRP
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="OSPFZone" data-category="OSPF">OSPF
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="RIPZone" data-category="RIP">RIP
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page3" class="page">
+    <h2>問題 17 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left3">
+        <div class="draggable" draggable="true" id="item17_1" data-category="anycast">非ホストデバイスによって排他的に使用されます</div>
+        <div class="draggable" draggable="true" id="item17_2" data-category="anycast">単一のアドレスではなくグループアドレスにパケットを送信します</div>
+        <div class="draggable" draggable="true" id="item17_3" data-category="multicast">グループに送信されたユニキャストソースがある</div>
+        <div class="draggable" draggable="true" id="item17_4" data-category="multicast">アドレスを持つ最も近いインターフェースにルーティングされます</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="multicastZone" data-category="multicast">マルチキャスト
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="anycastZone" data-category="anycast">エニーキャスト
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page4" class="page">
+    <h2>問題 25 ネットワークプロトコルを左側から右側の適切なトランスポートサービスにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left4">
+        <div class="draggable" draggable="true" id="item25_1" data-category="connectionLess">SMTP</div>
+        <div class="draggable" draggable="true" id="item25_2" data-category="connectionOriented">SNMP</div>
+        <div class="draggable" draggable="true" id="item25_3" data-category="connectionLess">TFTP</div>
+        <div class="draggable" draggable="true" id="item25_4" data-category="connectionLess">VoIP</div>
+        <div class="draggable" draggable="true" id="item25_5" data-category="connectionOriented">SSH</div>
+        <div class="draggable" draggable="true" id="item25_6" data-category="connectionOriented">FTP</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="connectionOrientedZone" data-category="connectionOriented">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="connectionLessZone" data-category="connectionLess">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page5" class="page">
+    <h2>問題 29 左側のネットワーキングに関する記述を、右側の対応するネットワーキングタイプにドラッグアンドドロップします。すべてのステートメントが使用されているわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left5">
+        <div class="draggable" draggable="true" id="item29_1" data-category="controllerBasedNetworking">このタイプでは、複数のデバイスにわたって一貫した構成が展開されます。</div>
+        <div class="draggable" draggable="true" id="item29_2" data-category="traditionalNetworking">分散型コントロールプレーンが必要です。</div>
+        <div class="draggable" draggable="true" id="item29_3" data-category="traditionalNetworking">このタイプには分散管理プレーンが必要です。</div>
+        <div class="draggable" draggable="true" id="item29_4" data-category="controllerBasedNetworking">サウスバウンド API は構成を適用するために使用されます。</div>
+        <div class="draggable" draggable="true" id="item29_5" data-category="">ノースバウンド API はエンドデバイスと対話します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="controllerBasedNetworkingZone" data-category="controllerBasedNetworking">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="traditionalNetworkingZone" data-category="traditionalNetworking">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page6" class="page">
+    <h2>問題 37 SNMP コンポーネントを左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left6">
+        <div class="draggable" draggable="true" id="item37_1" data-category="agent">agent</div>
+        <div class="draggable" draggable="true" id="item37_2" data-category="managedDevice">managed device</div>
+        <div class="draggable" draggable="true" id="item37_3" data-category="mib">MIB</div>
+        <div class="draggable" draggable="true" id="item37_4" data-category="nms">NMS</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="mibZone" data-category="mib">SNMP 経由で状態を問い合わせることができる、一意に識別可能なオブジェクトのコレクション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="agentZone" data-category="agent">SNMP によって制御されるネットワークノード
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="managedDeviceZone" data-category="managedDevice">監視アプリケーションを実行し、ネットワークノードを制御するシステム
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="nmsZone" data-category="nms">デバイスとネットワークのデータをキャプチャして変換する SNMP コンポーネント
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page7" class="page">
+    <h2>問題 54 デバイス管理の説明を左側から右側のデバイス管理の種類にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left7">
+        <div class="draggable" draggable="true" id="item54_1" data-category="TDM">SSH ターミナル経由で変更を実装します</div>
+        <div class="draggable" draggable="true" id="item54_2" data-category="TDM">デバイスごとにデバイス構成を管理します</div>
+        <div class="draggable" draggable="true" id="item54_3" data-category="DNACenter">クラウドを監視してソフトウェアのアップデートを確認します</div>
+        <div class="draggable" draggable="true" id="item54_4" data-category="TDM">セキュリティは、ファイアウォール、VPN、IPS を使用してネットワークの境界近くで管理されます</div>
+        <div class="draggable" draggable="true" id="item54_5" data-category="DNACenter">CLI テンプレートを使用して、個別の場所にある複数のデバイスに一貫した設定を適用します</div>
+        <div class="draggable" draggable="true" id="item54_6" data-category="DNACenter">NetFlow を使用してネットワーク全体の潜在的なセキュリティ脅威を分析し、そのトラフィックに対して適切なアクションを実行します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="DNACenterZone" data-category="DNACenter">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="TDMZone" data-category="TDM">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page8" class="page">
+    <h2>問題 64 WLAN コンポーネントを左側から右側のコンポーネントの詳細にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left8">
+        <div class="draggable" draggable="true" id="item64_1" data-category="accessPoint">アクセスポイント</div>
+        <div class="draggable" draggable="true" id="item64_2" data-category="virtualInterface">バーチャルインターフェース</div>
+        <div class="draggable" draggable="true" id="item64_3" data-category="dynamicInterface">ダイナミックインターフェイス</div>
+        <div class="draggable" draggable="true" id="item64_4" data-category="servicePort">サービスポート</div>
+        <div class="draggable" draggable="true" id="item64_5" data-category="WLC">ワイヤレスLANコントローラー</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="WLCZone" data-category="WLC">アクセスポイントを管理します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="accessPointZone" data-category="accessPoint">Wi-Fi デバイスに有線ネットワークへの接続を提供します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="servicePortZone" data-category="servicePort">帯域外管理に使用される
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="virtualInterfaceZone" data-category="virtualInterface">ゲスト認証に使用される
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="dynamicInterfaceZone" data-category="dynamicInterface">無線クライアント通信のために WLAN に適用されます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page9" class="page">
+    <h2>問題 67 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left9">
+        <div class="draggable" draggable="true" id="item67_1" data-category="globalUnicastAddress">1対1のコミュニケーションを提供します</div>
+        <div class="draggable" draggable="true" id="item67_2" data-category="globalUnicastAddress">アドレスが競合することなくサイトを結合できるようになります</div>
+        <div class="draggable" draggable="true" id="item67_3" data-category="uniqueLocal">プライベート IPv4 アドレスに相当するものです</div>
+        <div class="draggable" draggable="true" id="item67_4" data-category="uniqueLocal">IPv4 アドレスと同じ方法でパブリックにルーティング可能です</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastAddressZone" data-category="globalUnicastAddress">グローバルユニキャストアドレス
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="uniqueLocalZone" data-category="uniqueLocal">ユニークローカル
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page10" class="page">
+    <h2>問題 70 AAA をサポートするプロトコルの機能を左から右のプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left10">
+        <div class="draggable" draggable="true" id="item70_1" data-category="RADIUS">アクセス要求を送信するときにパスワードのみを暗号化します</div>
+        <div class="draggable" draggable="true" id="item70_2" data-category="TACACS">アクセス要求パケットの本文全体を暗号化します</div>
+        <div class="draggable" draggable="true" id="item70_3" data-category="TACACS">3 つの AAA 操作をすべて分離します</div>
+        <div class="draggable" draggable="true" id="item70_4" data-category="RADIUS">認証と認可を組み合わせる</div>
+        <div class="draggable" draggable="true" id="item70_5" data-category="TACACS">TCPを使用します</div>
+        <div class="draggable" draggable="true" id="item70_6" data-category="RADIUS">UDPを使用します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="RADIUSZone" data-category="RADIUS">RADIUS
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="TACACSZone" data-category="TACACS">TACACS+
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page11" class="page">
+    <h2>問題 72 Rapid PVST+ フォワーディングステートアクションを左から右にドラッグアンドドロップします。すべてのアクションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left11">
+        <div class="draggable" draggable="true" id="item72_1" data-category="action">受信された BPDU はシステムモジュールに転送されます。</div>
+        <div class="draggable" draggable="true" id="item72_2" data-category="">システムモジュールから受信した BPDU が処理されて送信されます。</div>
+        <div class="draggable" draggable="true" id="item72_3" data-category="">接続されたセグメントから受信したフレームは破棄されます。</div>
+        <div class="draggable" draggable="true" id="item72_4" data-category="action">接続されたセグメントから受信したフレームが処理されます。</div>
+        <div class="draggable" draggable="true" id="item72_5" data-category="action">他のポートから受信したスイッチングフレームは転送されます。</div>
+        <div class="draggable" draggable="true" id="item72_6" data-category="action">フォワーディングステートのポートはネットワーク管理メッセージに応答します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="actionZone" data-category="action">action
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page12" class="page">
+    <h2>問題 83 IPv6 アドレスの説明を左から右の IPv6 アドレスタイプにドラッグアンドドロップします。すべてのオプションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left12">
+        <div class="draggable" draggable="true" id="item83_1" data-category="uniqueLocalAddress">FF02::5 形式の ipv6 アドレス</div>
+        <div class="draggable" draggable="true" id="item83_2" data-category="">FD で始まる IPv6 アドレス</div>
+        <div class="draggable" draggable="true" id="item83_3" data-category="linkLocalAddress">複数の組織が同時に使用できる</div>
+        <div class="draggable" draggable="true" id="item83_4" data-category="linkLocalAddress">プライベート IPv6 アドレス</div>
+        <div class="draggable" draggable="true" id="item83_5" data-category="uniqueLocalAddress">ネクストホップアドレスとして機能する</div>
+        <div class="draggable" draggable="true" id="item83_6" data-category="uniqueLocalAddress">宛先アドレスとして機能できません</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="uniqueLocalAddressZone" data-category="uniqueLocalAddress">ユニークローカルアドレス
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="linkLocalAddressZone" data-category="linkLocalAddress">リンクローカルアドレス
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page13" class="page">
+    <h2>問題 97 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left13">
+        <div class="draggable" draggable="true" id="item97_1" data-category="linkLocalAddress2">単一のリンクに限定される</div>
+        <div class="draggable" draggable="true" id="item97_2" data-category="linkLocalAddress2">すべての IPv6 デバイスで必須</div>
+        <div class="draggable" draggable="true" id="item97_3" data-category="globalUnicastAddress2">IPv4 アドレスと同じ方法でパブリックにルーティング可能です</div>
+        <div class="draggable" draggable="true" id="item97_4" data-category="globalUnicastAddress2">1対1のコミュニケーションを提供します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastAddressZone2" data-category="globalUnicastAddress2">グローバルユニキャストアドレス
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="linkLocalAddressZone2" data-category="linkLocalAddress2">リンクローカルアドレス
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page14" class="page">
+    <h2>問題 98 仮想化の概念を左側から右側の対応するステートメントにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left14">
+        <div class="draggable" draggable="true" id="item98_1" data-category="guestOperatingSystem">ゲストオペレーティングシステム</div>
+        <div class="draggable" draggable="true" id="item98_2" data-category="hostOperatingSystem">ホストオペレーティングシステム</div>
+        <div class="draggable" draggable="true" id="item98_3" data-category="hyperVisor">ハイパーバイザー</div>
+        <div class="draggable" draggable="true" id="item98_4" data-category="multithreading">マルチスレッド</div>
+        <div class="draggable" draggable="true" id="item98_5" data-category="virtualMachine">仮想マシン</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="virtualMachineZone" data-category="virtualMachine">サーバーハードウェアから切り離されたオペレーティングシステムインスタンス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="multithreadingZone" data-category="multithreading">各コアは複数のプロセスを同時に実行できます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="hyperVisorZone" data-category="hyperVisor">物理サーバー上で実行し、物理リソースを管理および割り当てます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="guestOperatingSystemZone" data-category="guestOperatingSystem">物理ハードウェアの基本機能を管理するソフトウェア
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="hostOperatingSystemZone" data-category="hostOperatingSystem">仮想マシンの基本機能を管理するソフトウェア
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page15" class="page">
+    <h2>問題 101 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left15">
+        <div class="draggable" draggable="true" id="item101_1" data-category="multicast2">単一のリンクに限定される</div>
+        <div class="draggable" draggable="true" id="item101_2" data-category="multicast2">1対多の通信を提供します</div>
+        <div class="draggable" draggable="true" id="item101_3" data-category="linkLocalAddress3">ネクストホップアドレスとして機能します</div>
+        <div class="draggable" draggable="true" id="item101_4" data-category="linkLocalAddress3">送信元アドレスとして使用できません</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="multicastZone2" data-category="multicast2">マルチキャスト
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="linkLocalAddressZone3" data-category="linkLocalAddress3">リンクローカルアドレス
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page16" class="page">
+    <h2>問題 103 TCP または UDP の詳細を左側から右側の対応するプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left16">
+        <div class="draggable" draggable="true" id="item103_1" data-category="udp">データチャネルを必要とせず、パケットに含まれるデータに基づいて送信される</div>
+        <div class="draggable" draggable="true" id="item103_2" data-category="tcp">パケットを送信する前にクライアントとサーバーが接続を確立する必要があります</div>
+        <div class="draggable" draggable="true" id="item103_3" data-category="tcp">デバイス間でファイルを確実に共有するために使用されます</div>
+        <div class="draggable" draggable="true" id="item103_4" data-category="udp">遅延を最小限に抑えたストリーミング操作に適しています</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="tcpZone" data-category="tcp">TCP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="udpZone" data-category="udp">UDP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page17" class="page">
+    <h2>問題 127 エンジニアは、クライアントワークステーションのネットワーク構成パラメーターを検証して、チームリーダーに報告する任務を負っています。ノード識別子を左側から右側のネットワークパラメータにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left17">
+        <div class="draggable" draggable="true" id="item127_1" data-category="defaultGateway">192.168.1.1</div>
+        <div class="draggable" draggable="true" id="item127_2" data-category="hostIPAddress">192.168.1.20</div>
+        <div class="draggable" draggable="true" id="item127_3" data-category="lastAssignable">192.168.1.254</div>
+        <div class="draggable" draggable="true" id="item127_4" data-category="broadcastAddress">192.168.1.255</div>
+        <div class="draggable" draggable="true" id="item127_5" data-category="MACAddress">B8-76-3F-7C-57-DF</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="broadcastAddressZone" data-category="broadcastAddress">ブロードキャストアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="defaultGatewayZone" data-category="defaultGateway">デフォルトゲートウェイ
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="hostIPAddressZone" data-category="hostIPAddress">ホスト IP アドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="lastAssignableZone" data-category="lastAssignable">サブネット内で最後に割り当て可能な IP アドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="MACAddressZone" data-category="MACAddress">MAC アドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page18" class="page">
+    <h2>問題 129 AAA サービスの説明を左側から右側の対応するサービスにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left18">
+        <div class="draggable" draggable="true" id="item129_1" data-category="authentication">ユーザーがイネーブルモードに変更できるようにします</div>
+        <div class="draggable" draggable="true" id="item129_2" data-category="authorization">ユーザーのアクセス権限を制限します</div>
+        <div class="draggable" draggable="true" id="item129_3" data-category="accounting">ログセッション統計</div>
+        <div class="draggable" draggable="true" id="item129_4" data-category="accounting">ユーザーコマンドを記録する</div>
+        <div class="draggable" draggable="true" id="item129_5" data-category="authorization">ルーターへのアクセスを保護します</div>
+        <div class="draggable" draggable="true" id="item129_6" data-category="authentication">ユーザーの資格情報を検証します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="accountingZone" data-category="accounting">アカウンティング
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authenticationZone" data-category="authentication">認証
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authorizationZone" data-category="authorization">認可
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page19" class="page">
+    <h2>問題 153 Rapid PVST+ フォワーディングスレートアクションをロフトから右にドラッグアンドドロップします。すべてのアクションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left19">
+        <div class="draggable" draggable="true" id="item153_1" data-category="action2">受信した BPDU はシステムモジュールに転送されます。</div>
+        <div class="draggable" draggable="true" id="item153_2" data-category="action2">システムモジュールから受信した BPDU は処理されて送信されます。</div>
+        <div class="draggable" draggable="true" id="item153_3" data-category="action2">接続されたセグメントから受信したフレームは破棄されます。</div>
+        <div class="draggable" draggable="true" id="item153_4" data-category="">接続されたセグメントから受信したフレームが処理されます。</div>
+        <div class="draggable" draggable="true" id="item153_5" data-category="">他のポートから受信したスイッチングフレームは転送されます。</div>
+        <div class="draggable" draggable="true" id="item153_6" data-category="action2">フォワーディングステートのポートはネットワーク管理メッセージに応答します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="actionZone2" data-category="action2">アクション
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page20" class="page">
+    <h2>問題 161 Lightweight アクセスポイントの動作モードを左から右の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left20">
+        <div class="draggable" draggable="true" id="item161_1" data-category="bridgeMode">bridge mode</div>
+        <div class="draggable" draggable="true" id="item161_2" data-category="localMode">local mode</div>
+        <div class="draggable" draggable="true" id="item161_3" data-category="monitorMode">monitor mode</div>
+        <div class="draggable" draggable="true" id="item161_4" data-category="FlexconnectMode">Flexconnect mode</div>
+        <div class="draggable" draggable="true" id="item161_5" data-category="snifferMode">sniffer mode</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="localModeZone" data-category="localMode">アクセスポイントが WAN リンク経由で WLC と通信できるようにします
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="snifferModeZone" data-category="snifferMode">ワイヤレストラフィックのパケットキャプチャを可能にします
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="bridgeModeZone" data-category="bridgeMode">メッシュ環境でアクセスポイントを接続する場合に推奨
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="FlexconnectModeZone" data-category="FlexconnectMode">RFID および IDS の専用センサーとして機能する受信専用モード
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="monitorModeZone" data-category="monitorMode">1 つのチャネルで通常どおり送信し、他のチャネルのノイズと干渉を監視します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page21" class="page">
+    <h2>問題 172 WLAN コンポーネントを左側から右側の正しい説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left21">
+        <div class="draggable" draggable="true" id="item172_1" data-category="accessPoint2">アクセスポイント</div>
+        <div class="draggable" draggable="true" id="item172_2" data-category="virtualInterface2">バーチャルインターフェース</div>
+        <div class="draggable" draggable="true" id="item172_3" data-category="dynamicInterface2">ダイナミックインターフェイス</div>
+        <div class="draggable" draggable="true" id="item172_4" data-category="servicePort2">サービスポート</div>
+        <div class="draggable" draggable="true" id="item172_5" data-category="WLC2">ワイヤレスLANコントローラー</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="WLCZone2" data-category="WLC2">アクセスポイントを管理するデバイス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="accessPointZone2" data-category="accessPoint2">Wi-Fi デバイスに有線ネットワークへの接続を提供するデバイス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="servicePortZone2" data-category="servicePort2">WLC の帯域外管理に使用
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="virtualInterfaceZone2" data-category="virtualInterface2">WLC のモビリティ管理をサポートするために使用
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="dynamicInterfaceZone2" data-category="dynamicInterface2">ワイヤレスクライアント通信のために WLAN に適用
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page22" class="page">
+    <h2>問題 178 左側の AAA サービス会社に関する記述を、右側の対応する AAA サービスにドラッグアンドドロップします。すべてのオプションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left22">
+        <div class="draggable" draggable="true" id="item178_1" data-category="authentication2">FTP サーバーなどのネットワーク資産へのアクセスを許可します。</div>
+        <div class="draggable" draggable="true" id="item178_2" data-category="accounting2">ユーザーが利用できるサービスが制限されます。</div>
+        <div class="draggable" draggable="true" id="item178_3" data-category="">TACACS+ 経由でユーザー検証を実行します。</div>
+        <div class="draggable" draggable="true" id="item178_4" data-category="accounting2">各接続の継続時間を記録します。</div>
+        <div class="draggable" draggable="true" id="item178_5" data-category="">ユーザーアクセスレポートをサポートします。</div>
+        <div class="draggable" draggable="true" id="item178_6" data-category="authentication2">それは「あなたが誰であるか」を証明します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="accountingZone2" data-category="accounting2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authenticationZone2" data-category="authentication2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page23" class="page">
+    <h2>問題 186 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left23">
+        <div class="draggable" draggable="true" id="item186_1" data-category="globalUnicastAddress3">IPv4 アドレスと同じようにパブリックにルーティング可能です</div>
+        <div class="draggable" draggable="true" id="item186_2" data-category="globalUnicastAddress3">ネクストホップアドレスとして機能します</div>
+        <div class="draggable" draggable="true" id="item186_3" data-category="linkLocalAddress4">すべての IPv6 デバイスで必須</div>
+        <div class="draggable" draggable="true" id="item186_4" data-category="linkLocalAddress4">1対1のコミュニケーションを提供します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastAddressZone3" data-category="globalUnicastAddress3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="linkLocalAddressZone4" data-category="linkLocalAddress4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page24" class="page">
+    <h2>問題 191 エンジニアは、10.200.0.2 のバックアップルーターへのフローティングスタティックデフォルトルートを使用して、コアルーターを構成する必要があります。</h2>
+    <div class="container">
+      <div class="left" id="left24">
+        <div class="draggable" draggable="true" id="item191_1" data-category="udp2">DNS</div>
+        <div class="draggable" draggable="true" id="item191_2" data-category="tcp2">HTTP</div>
+        <div class="draggable" draggable="true" id="item191_3" data-category="udp2">RTP</div>
+        <div class="draggable" draggable="true" id="item191_4" data-category="tcp2">SMTP</div>
+        <div class="draggable" draggable="true" id="item191_5" data-category="udp2">SNMP</div>
+        <div class="draggable" draggable="true" id="item191_6" data-category="tcp2">Telnet</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="tcpZone2" data-category="tcp2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="udpZone2" data-category="udp2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page25" class="page">
+    <h2>問題 220 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left25">
+        <div class="draggable" draggable="true" id="item220_1" data-category="uniqueLocal2">インターネット上でルーティングできません</div>
+        <div class="draggable" draggable="true" id="item220_2" data-category="uniqueLocal2">プライベート IPv4 アドレスに相当します</div>
+        <div class="draggable" draggable="true" id="item220_3" data-category="globalUnicastAddress4">ルーティングプレフィックスの集約を有効にします</div>
+        <div class="draggable" draggable="true" id="item220_4" data-category="globalUnicastAddress4">ルーティング可能であり、インターネット経由で到達可能である</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastAddressZone4" data-category="globalUnicastAddress4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="uniqueLocalZone2" data-category="uniqueLocal2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page26" class="page">
+    <h2>問題 240 学習したプレフィックスを左側から右側のサブネットマスクにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left26">
+        <div class="draggable" draggable="true" id="item240_1" data-category="255_255_255_240">172.16.3.128</div>
+        <div class="draggable" draggable="true" id="item240_2" data-category="255_255_255_224">172.16.3.64</div>
+        <div class="draggable" draggable="true" id="item240_3" data-category="255_255_255_128">172.16.2.128</div>
+        <div class="draggable" draggable="true" id="item240_4" data-category="255_255_255_248">172.16.3.192</div>
+        <div class="draggable" draggable="true" id="item240_5" data-category="255_255_254_0">172.16.4.0</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="255_255_254_0Zone" data-category="255_255_254_0">255.255.254.0
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="255_255_255_128Zone" data-category="255_255_255_128">255.255.255.128
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="255_255_255_224Zone" data-category="255_255_255_224">255.255.255.224
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="255_255_255_240Zone" data-category="255_255_255_240">255.255.255.240
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="255_255_255_248Zone" data-category="255_255_255_248">255.255.255.248
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page27" class="page">
+    <h2>問題 251 アクセスポイントモードに関する説明を左側から右側の対応するモードにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left27">
+        <div class="draggable" draggable="true" id="item251_1" data-category="Sensor">有効なすべてのチャネルにわたって電波品質データと干渉検出を提供します。</div>
+        <div class="draggable" draggable="true" id="item251_2" data-category="Sensor">これにより、強化された RFID タグの位置追跡が可能になります。</div>
+        <div class="draggable" draggable="true" id="item251_3" data-category="monitor">ワイヤレスパフォーマンステストの分析をサポートします。</div>
+        <div class="draggable" draggable="true" id="item251_4" data-category="monitor">ネットワークエンジニアがオフサイトにいる場合でも、リアルタイムの Wi-Fi クライアントのトラブルシューティングをサポートします。</div>
+        <div class="draggable" draggable="true" id="item251_5" data-category="sniffer">リモートデバイス上のワイヤレスフレームを分析するソフトウェアをサポートします。</div>
+        <div class="draggable" draggable="true" id="item251_6" data-category="sniffer">特定のワイヤレスチャネル上のパケットをキャプチャして転送します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="monitorZone" data-category="monitor">monitor
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="SensorZone" data-category="Sensor">Sensor
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="snifferZone" data-category="sniffer">sniffer
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page28" class="page">
+    <h2>問題 259 TCP/IP プロトコルを左側から右側の伝送プロトコルにドラッグアンドドロップします</h2>
+    <div class="container">
+      <div class="left" id="left28">
+        <div class="draggable" draggable="true" id="item259_1" data-category="udp3">DNS</div>
+        <div class="draggable" draggable="true" id="item259_2" data-category="tcp3">SMTP</div>
+        <div class="draggable" draggable="true" id="item259_3" data-category="udp3">SNMP</div>
+        <div class="draggable" draggable="true" id="item259_4" data-category="tcp3">HTTP</div>
+        <div class="draggable" draggable="true" id="item259_5" data-category="udp3">RTP</div>
+        <div class="draggable" draggable="true" id="item259_6" data-category="tcp3">Telnet</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="tcpZone3" data-category="tcp3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="udpZone3" data-category="udp3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page29" class="page">
+    <h2>問題 268 ファイル転送プロトコルの説明を左側から右側の適切なプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left29">
+        <div class="draggable" draggable="true" id="item268_1" data-category="ftp">起動時に IOS イメージをロードする際に信頼性を提供します</div>
+        <div class="draggable" draggable="true" id="item268_2" data-category="tftp">ユーザー認証は必要ありません</div>
+        <div class="draggable" draggable="true" id="item268_3" data-category="tftp">ポート 69 を使用します</div>
+        <div class="draggable" draggable="true" id="item268_4" data-category="ftp">ポート 20 と 21 を使用します</div>
+        <div class="draggable" draggable="true" id="item268_5" data-category="ftp">TCP を使用します</div>
+        <div class="draggable" draggable="true" id="item268_6" data-category="tftp">UDP を使用します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="ftpZone" data-category="ftp">FTP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="tftpZone" data-category="tftp">TFTP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page30" class="page">
+    <h2>問題 274 DHCP の機能を左から右の任意の位置にドラッグアンドドロップします。すべての機能が使用されているわけではありません</h2>
+    <div class="container">
+      <div class="left" id="left30">
+        <div class="draggable" draggable="true" id="item274_1" data-category="action3">クライアントサーバー方式を使用してネットワークセグメントのローカル制御を提供します</div>
+        <div class="draggable" draggable="true" id="item274_2" data-category="action3">オンボーディングエンドユーザーの管理負担を軽減します</div>
+        <div class="draggable" draggable="true" id="item274_3" data-category="">ホスト名をIPアドレスに関連付けます</div>
+        <div class="draggable" draggable="true" id="item274_4" data-category="action3">アドレスプールを維持します</div>
+        <div class="draggable" draggable="true" id="item274_5" data-category="action3">構成可能なリース期間の間、ローカルホストに IP アドレスを割り当てます</div>
+        <div class="draggable" draggable="true" id="item274_6" data-category="">ドメインネームサーバー構成を提供します</div>
+        <div class="draggable" draggable="true" id="item274_7" data-category="">記録保持のために権威あるサーバーを使用する</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="actionZone3" data-category="action3">アクション
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page31" class="page">
+    <h2>問題 275 ネットワークパラメータを左側から右側の正しい値にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left31">
+        <div class="draggable" draggable="true" id="item275_1" data-category="192_168_1_193">default gateway</div>
+        <div class="draggable" draggable="true" id="item275_2" data-category="192_168_1_200">host IP address</div>
+        <div class="draggable" draggable="true" id="item275_3" data-category="00_0C_22_83_79_A3">NIC MAC address</div>
+        <div class="draggable" draggable="true" id="item275_4" data-category="00_0C_22">NIC vendor OUI</div>
+        <div class="draggable" draggable="true" id="item275_5" data-category="255_255_255_192">subnet mask</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="00_0C_22Zone" data-category="00_0C_22">00:0C:22
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="00_0C_22_83_79_A3Zone" data-category="00_0C_22_83_79_A3">00:0C:22:83:79:A3
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="192_168_1_193Zone" data-category="192_168_1_193">192.168.1.193
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="192_168_1_200Zone" data-category="192_168_1_200">192.168.1.200
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="255_255_255_192Zone" data-category="255_255_255_192">255.255.255.192
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page32" class="page">
+    <h2>問題 284 コマンドを左側から右側の宛先インターフェースにドラッグアンドドロップします。すべてのコマンドが使用されているわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left32">
+        <div class="draggable" draggable="true" id="item284_1" data-category="DC_1_Gi1_1">ip address 192.168.4.9 255.255.255.248</div>
+        <div class="draggable" draggable="true" id="item284_2" data-category="DC_1_Gi1_2">ip address 192.168.3.14 255.255.255.240</div>
+        <div class="draggable" draggable="true" id="item284_3" data-category="">ip address 209.165.202.129 255.255.255.252</div>
+        <div class="draggable" draggable="true" id="item284_4" data-category="">ip address 192.168.4.13 255.255.255.240</div>
+        <div class="draggable" draggable="true" id="item284_5" data-category="DC_1_Gi1_0">ip address 209.165.202.130 255.255.255.252</div>
+        <div class="draggable" draggable="true" id="item284_6" data-category="">ip address 209.165.202.131 255.255.255.252</div>
+        <div class="draggable" draggable="true" id="item284_7" data-category="HQ-1_Gi1_3">ip address 192.168.3.14 255.255.255.248</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="DC_1_Gi1_0Zone" data-category="DC_1_Gi1_0">DC-1 (Gi1/0)
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="DC_1_Gi1_1Zone" data-category="DC_1_Gi1_1">DC-1 (Gi1/1)
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="DC_1_Gi1_2Zone" data-category="DC_1_Gi1_2">DC-1 (Gi1/2)
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="HQ-1_Gi1_3Zone" data-category="HQ-1_Gi1_3">HQ-1 (Gi1/3)
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page33" class="page">
+    <h2>問題 298 Wi-Fi 用語を左から右の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left33">
+        <div class="draggable" draggable="true" id="item298_1" data-category="distributionSystem">distribution system</div>
+        <div class="draggable" draggable="true" id="item298_2" data-category="extendedServiceSet">extended service set</div>
+        <div class="draggable" draggable="true" id="item298_3" data-category="independentBasicServiceSet">independent basic service set</div>
+        <div class="draggable" draggable="true" id="item298_4" data-category="infrastructureMode">infrastructure mode</div>
+        <div class="draggable" draggable="true" id="item298_5" data-category="SSID">SSID</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="distributionSystemZone" data-category="distributionSystem">異なるアクセスポイントのセルをリンクする Wi-Fi オプション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="independentBasicServiceSetZone" data-category="independentBasicServiceSet">中央のアクセスポイントを使用せずに 2 つ以上のクライアントが直接通信できるようにする Wi-Fl オプション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="extendedServiceSetZone" data-category="extendedServiceSet">1 つ以上のアクセスポイントに基づく Wi-Fi オプション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="SSIDZone" data-category="SSID">ワイヤレスネットワークを識別する英数字のテキスト文字列
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="infrastructureModeZone" data-category="infrastructureMode">アクセスポイントの無線セル全体と有線ネットワークへのリンク
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page34" class="page">
+    <h2>問題 305 左の AAA 機能を右の正しい AAA サービスにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left34">
+        <div class="draggable" draggable="true" id="item305_1" data-category="accounting3">ユーザーのアクティビティを記録する</div>
+        <div class="draggable" draggable="true" id="item305_2" data-category="authorization4">ユーザーが利用できるサービスを制限します</div>
+        <div class="draggable" draggable="true" id="item305_3" data-category="authentication3">ユーザーを特定します</div>
+        <div class="draggable" draggable="true" id="item305_4" data-category="authorization4">ユーザーが実行できるアクションを制御します</div>
+        <div class="draggable" draggable="true" id="item305_5" data-category="accounting3">ネットワーク管理者に分析情報を提供します</div>
+        <div class="draggable" draggable="true" id="item305_6" data-category="authentication3">ユーザーに関連付けられたパスワードを検証します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="authenticationZone3" data-category="authentication3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authorizationZone4" data-category="authorization4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="accountingZone3" data-category="accounting3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page35" class="page">
+    <h2>問題 323 デバイス管理テクノロジーの特性を左側から右側の対応する展開の種類にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left35">
+        <div class="draggable" draggable="true" id="item323_1" data-category="DNACenter2">バックグラウンドのデバイス構成を調整します</div>
+        <div class="draggable" draggable="true" id="item323_2" data-category="traditional">カスタム構成や非標準構成の柔軟性が向上します</div>
+        <div class="draggable" draggable="true" id="item323_3" data-category="DNACenter2">デバイスごとの管理が重要</div>
+        <div class="draggable" draggable="true" id="item323_4" data-category="DNACenter2">一元化されたソフトウェア管理をサポートします</div>
+        <div class="draggable" draggable="true" id="item323_5" data-category="traditional">オープン API をサポート</div>
+        <div class="draggable" draggable="true" id="item323_6" data-category="traditional">個別のソフトウェア管理を使用する</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="DNACenterZone2" data-category="DNACenter2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="traditionalZone" data-category="traditional">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page36" class="page">
+    <h2>問題 349 エンジニアは、ユニキャストマルチキャストおよびブロードキャストを転送するデバイスがポートをフラッディングできないように、ポートセキュリティを備えたスイッチを構成する必要があります。ポートは、一度に 2 つのランダムな MAC アドレスのみを許可するように構成する必要があります。すべてのコマンドが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left36">
+        <div class="draggable" draggable="true" id="item349_1" data-category="">switchport mode access</div>
+        <div class="draggable" draggable="true" id="item349_2" data-category="action4">switchport port-security</div>
+        <div class="draggable" draggable="true" id="item349_3" data-category="">switchport port-security mac-address 0060.3EDD.77A8</div>
+        <div class="draggable" draggable="true" id="item349_4" data-category="">switchport port-security mac-address 0000.D3ED.622A</div>
+        <div class="draggable" draggable="true" id="item349_5" data-category="action4">switchport port-security mac-address sticky</div>
+        <div class="draggable" draggable="true" id="item349_6" data-category="action4">switchport port-security maximum 2</div>
+        <div class="draggable" draggable="true" id="item349_7" data-category="action4">switchport port-security violation shutdown</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="actionZone4" data-category="action4">アクション
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page37" class="page">
+    <h2>問題 350 Cisco Wireless LAN Controller のセキュリティ設定を、左側から右側の適切なセキュリティメカニズムカテゴリにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left37">
+        <div class="draggable" draggable="true" id="item350_1" data-category="L3SecurityMechanisms">web policy</div>
+        <div class="draggable" draggable="true" id="item350_2" data-category="L3SecurityMechanisms">Passthrough</div>
+        <div class="draggable" draggable="true" id="item350_3" data-category="L2SecurityMechanisms">WPA+WPA2</div>
+        <div class="draggable" draggable="true" id="item350_4" data-category="L2SecurityMechanisms">802.1X</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="L2SecurityMechanismsZone" data-category="L2SecurityMechanisms">レイヤ2 セキュリティメカニズム
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="L3SecurityMechanismsZone" data-category="L3SecurityMechanisms">レイヤ3 セキュリティメカニズム (for WLAN)
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page38" class="page">
+    <h2>問題 359 IPv6 DNS レコードタイプを左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left38">
+        <div class="draggable" draggable="true" id="item359_1" data-category="aaaa">AAAA</div>
+        <div class="draggable" draggable="true" id="item359_2" data-category="cname">CNAME</div>
+        <div class="draggable" draggable="true" id="item359_3" data-category="ns">NS</div>
+        <div class="draggable" draggable="true" id="item359_4" data-category="ptr">PTR</div>
+        <div class="draggable" draggable="true" id="item359_5" data-category="soa">SOA</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cnameZone" data-category="cname">ある名前を別の名前にエイリアスする
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="soaZone" data-category="soa">ドメインのシリアル番号をその所有者に関連付けます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="nsZone" data-category="ns">ドメインとその権威ネームサーバーを関連付けます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="aaaaZone" data-category="aaaa">ホスト名とIPアドレスを関連付けます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="ptrZone" data-category="ptr">名前の逆引きをサポートします
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page39" class="page">
+    <h2>問題 362 ノースバウンド API の特性を左から右の任意の位置にドラッグアンドドロップします。すべての特性が使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left39">
+        <div class="draggable" draggable="true" id="item362_1" data-category="">自動化をサポート</div>
+        <div class="draggable" draggable="true" id="item362_2" data-category="action5">SDN コントローラーとアプリケーションプレーンの間で通信します</div>
+        <div class="draggable" draggable="true" id="item362_3" data-category="action5">システム間のデータ共有をサポート</div>
+        <div class="draggable" draggable="true" id="item362_4" data-category="">SDN コントローラーとデータプレーンの間で通信します</div>
+        <div class="draggable" draggable="true" id="item362_5" data-category="action5">ネットワーク仮想化プロトコルをサポートします</div>
+        <div class="draggable" draggable="true" id="item362_6" data-category="action5">REST ベースの要件をサポート</div>
+        <div class="draggable" draggable="true" id="item362_7" data-category="">OpenFlow を使用してデータプレーンとコントロールプレーンの間のインターフェイスを作成します,,</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="actionZone5" data-category="action5">アクション
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page40" class="page">
+    <h2>問題 374 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left40">
+        <div class="draggable" draggable="true" id="item374_1" data-category="uniqueLocal3">1対1のコミュニケーションを提供します</div>
+        <div class="draggable" draggable="true" id="item374_2" data-category="uniqueLocal3">プライベート IPv4 アドレスに相当します</div>
+        <div class="draggable" draggable="true" id="item374_3" data-category="globalUnicastAddress5">IPv4 アドレスと同じようにパブリックにルーティング可能です</div>
+        <div class="draggable" draggable="true" id="item374_4" data-category="globalUnicastAddress5">アドレスが競合することなくサイトを結合できるようになります</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastAddressZone5" data-category="globalUnicastAddress5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="uniqueLocalZone3" data-category="uniqueLocal3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page41" class="page">
+    <h2>問題 380 Ansible 機能を左から右にドラッグアンドドロップします。すべての機能が使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left41">
+        <div class="draggable" draggable="true" id="item380_1" data-category="action6">デフォルトで SSH 経由でモジュールを実行します</div>
+        <div class="draggable" draggable="true" id="item380_2" data-category="">YAML 言語を使用します</div>
+        <div class="draggable" draggable="true" id="item380_3" data-category="action6">エージェントを使用してホストを管理する</div>
+        <div class="draggable" draggable="true" id="item380_4" data-category="action6">構成をクライアントにプッシュします</div>
+        <div class="draggable" draggable="true" id="item380_5" data-category="">クライアントがサーバーから構成を取得する必要がある</div>
+        <div class="draggable" draggable="true" id="item380_6" data-category="action6">エージェントなしで動作する</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="actionZone6" data-category="action6">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page42" class="page">
+    <h2>問題 383 AAA サービスに関するステートメントを左側から右側の対応する AAA サービスにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left42">
+        <div class="draggable" draggable="true" id="item383_1" data-category="authorization5">FTP サーバーなどのネットワーク資産へのアクセスを許可します。</div>
+        <div class="draggable" draggable="true" id="item383_2" data-category="accounting4">ユーザーが実行できる CLI コマンドを制限します。</div>
+        <div class="draggable" draggable="true" id="item383_3" data-category="authorization5">TACACS+ 経由でユーザー検証を実行します。</div>
+        <div class="draggable" draggable="true" id="item383_4" data-category="">各接続の継続時間を記録します。</div>
+        <div class="draggable" draggable="true" id="item383_5" data-category="accounting4">ユーザーアクセスレポートをサポートします。</div>
+        <div class="draggable" draggable="true" id="item383_6" data-category="">それは「あなたが誰であるか」を証明します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="accountingZone4" data-category="accounting4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authorizationZone5" data-category="authorization5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page43" class="page">
+    <h2>問題 384 脅威を軽減する手法を左側からドラッグアンドドロップして、軽減する脅威または攻撃の種類を右側に配置します。</h2>
+    <div class="container">
+      <div class="left" id="left43">
+        <div class="draggable" draggable="true" id="item384_1" data-category="bpdu">BPDU ガードを設定します。</div>
+        <div class="draggable" draggable="true" id="item384_2" data-category="dynamicARP">ダイナミック ARP インスペクションを設定します。</div>
+        <div class="draggable" draggable="true" id="item384_3" data-category="rootGuard">ルートガードを設定します。</div>
+        <div class="draggable" draggable="true" id="item384_4" data-category="vacl">VACL を設定します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="vaclZone" data-category="vacl">802.1g 二重タグ付け
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="dynamicARPZone" data-category="dynamicARP">ARP スプーフィング
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="rootGuardZone" data-category="rootGuard">不要な優れた BPDUs
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="bpduZone" data-category="bpdu">PortFast 対応インターフェイス上の不要な BPDU
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page44" class="page">
+    <h2>問題 392 エンジニアは、ホスト A がホスト B と通信できるように、2 つのネットワーク間に静的ネットワークルートを構成する必要があります。コマンドを左側から、右側で構成する必要があるルーターにドラッグアンドドロップします。すべてのコマンドが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left44">
+        <div class="draggable" draggable="true" id="item392_1" data-category="">ip route 10.10.13.0 255.255.255.128 10.10.10.1</div>
+        <div class="draggable" draggable="true" id="item392_2" data-category="r2">ip route 10.10.13.0 255.255.255.128 10.10.10.5</div>
+        <div class="draggable" draggable="true" id="item392_3" data-category="r1">ip route 10.10.13.10 255.255.255.255 10.10.10.1</div>
+        <div class="draggable" draggable="true" id="item392_4" data-category="r2">ip route 10.10.14.0 255.255.255.0 10.10.10.2</div>
+        <div class="draggable" draggable="true" id="item392_5" data-category="r3">ip route 10.10.14.0 255.255.255.0 10.10.10.6</div>
+        <div class="draggable" draggable="true" id="item392_6" data-category="">ip route 10.10.14.10 255.255.255.255 10.10.10.6</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="r1Zone" data-category="r1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="r2Zone" data-category="r2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="r3Zone" data-category="r3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="page45" class="page">
+    <h2>問題 401 左側のネットワークの特性から、右側の適切なネットワークタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left45">
+        <div class="draggable" draggable="true" id="item401_1" data-category="controllerBasedNetworking2">ネットワークに焦点を当てた</div>
+        <div class="draggable" draggable="true" id="item401_2" data-category="traditionalNetworking2">デバイスに焦点を当てた</div>
+        <div class="draggable" draggable="true" id="item401_3" data-category="traditionalNetworking2">ユーザー入力は構成です</div>
+        <div class="draggable" draggable="true" id="item401_4" data-category="controllerBasedNetworking2">ユーザー入力はポリシーです</div>
+        <div class="draggable" draggable="true" id="item401_5" data-category="controllerBasedNetworking2">ホワイトリストセキュリティモデルを使用</div>
+        <div class="draggable" draggable="true" id="item401_6" data-category="traditionalNetworking2">ブラックリストセキュリティモデルを使用</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="controllerBasedNetworkingZone2" data-category="controllerBasedNetworking2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="traditionalNetworkingZone2" data-category="traditionalNetworking2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page46" class="page">
+    <h2>問題 412 IPv6 アドレスの種類を左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left46">
+        <div class="draggable" draggable="true" id="item412_1" data-category="2001_DB8">2001:DB8::bced:1234:456d:aacc</div>
+        <div class="draggable" draggable="true" id="item412_2" data-category="FD00_0000">FD00:0000:0000:1a2d:a153:3992:a19d:ccca</div>
+        <div class="draggable" draggable="true" id="item412_3" data-category="FE80_abcf">FE80::abcf:ffff:12de:3992</div>
+        <div class="draggable" draggable="true" id="item412_4" data-category="FF05_23">FF05::23:becf:22:1111</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="FF05_23Zone" data-category="FF05_23">サイト内でローカルでのみ使用されるマルチキャストアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="FE80_abcfZone" data-category="FE80_abcf">インターフェイスで IPv6 が有効になっている場合に、リンク上に自動的に作成されるアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="FD00_0000Zone" data-category="FD00_0000">インターネットへのルーティングが禁止されているアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="2001_DB8Zone" data-category="2001_DB8">一意であり、文書化目的で予約されているアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page47" class="page">
+    <h2>問題 435 AAA 機能を左側から右側の対応する AAA セキュリティサービスにドラッグアンドドロップします。すべてのオプションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left47">
+        <div class="draggable" draggable="true" id="item435_1" data-category="">これにより、デバイスがユーザーまたはグループベースのアクセスを許可できるようになります。</div>
+        <div class="draggable" draggable="true" id="item435_2" data-category="authorization6">RADIUS サーバーを利用して、ユーザーにリバース Telnet セッションへのアクセスを許可します。</div>
+        <div class="draggable" draggable="true" id="item435_3" data-category="accounting5">ユーザーがリモートサーバー上のネットワークにアクセスした時間を記録します。</div>
+        <div class="draggable" draggable="true" id="item435_4" data-category="authorization6">ユーザーが実行できる CLI コマンドを制限します。</div>
+        <div class="draggable" draggable="true" id="item435_5" data-category="accounting5">TACACS+ を使用して、ネットワーク管理者が入力した設定コマンドを記録します。</div>
+        <div class="draggable" draggable="true" id="item435_6" data-category="">デバイスへのアクセスを許可する前に、ユーザーとパスワードを検証します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="accountingZone5" data-category="accounting5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authorizationZone6" data-category="authorization6">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page48" class="page">
+    <h2>問題 440 エンジニアは、Web サーバーに静的 NAT を提供するようにルーターを構成しています。左側の構成コマンドを、右側の構成の位置に対応する文字にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left48">
+        <div class="draggable" draggable="true" id="item440_1" data-category="positionA">ip address 172.16.1.1 255.255.255.0</div>
+        <div class="draggable" draggable="true" id="item440_2" data-category="positionC">ip address 45.83.2.214 255.255.255.240</div>
+        <div class="draggable" draggable="true" id="item440_3" data-category="positionB">ip nat inside</div>
+        <div class="draggable" draggable="true" id="item440_4" data-category="positionF">ip nat inside source list 1 interface s0 overload</div>
+        <div class="draggable" draggable="true" id="item440_5" data-category="positionE">ip nat inside source static tcp 172.16.1.2 80 45.83.2.214 80 extendable</div>
+        <div class="draggable" draggable="true" id="item440_6" data-category="positionD">ip nat outside</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="positionAZone" data-category="positionA">position A
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="positionBZone" data-category="positionB">position B
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="positionCZone" data-category="positionC">position C
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="positionDZone" data-category="positionD">position D
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="positionEZone" data-category="positionE">position E
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="positionFZone" data-category="positionF">position F
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page49" class="page">
+    <h2>問題 441 ワイヤレスアーキテクチャのメリットを左側から右側のアーキテクチャタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left49">
+        <div class="draggable" draggable="true" id="item441_1" data-category="autonomous">小規模ビジネス環境に適しています。</div>
+        <div class="draggable" draggable="true" id="item441_2" data-category="split_MAC">作業はアクセスポイントとコントローラの間で分担されます。</div>
+        <div class="draggable" draggable="true" id="item441_3" data-category="autonomous">アクセスポイントはビーコンフレームを送信します。</div>
+        <div class="draggable" draggable="true" id="item441_4" data-category="split_MAC">デバイスごとの構成と管理をサポートします。</div>
+        <div class="draggable" draggable="true" id="item441_5" data-category="split_MAC">CAPWAP トンネリングプロトコルを使用します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="split_MACZone" data-category="split_MAC">split-MAC
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="autonomousZone" data-category="autonomous">Autonomous
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page50" class="page">
+    <h2>問題 443</h2>
+    <div class="container">
+      <div class="left" id="left50">
+        <div class="draggable" draggable="true" id="item443_1" data-category="globalUnicast">2001:db8:600d:cafe::123</div>
+        <div class="draggable" draggable="true" id="item443_2" data-category="uniqueLocal4">fcba:926a:e8e:7a25:b1:c6d2:1a76:8fdc</div>
+        <div class="draggable" draggable="true" id="item443_3" data-category="linkLocalUnicast">fe80::a00:27ff:feeb:89aa</div>
+        <div class="draggable" draggable="true" id="item443_4" data-category="multicast3">ff05::1:3</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastZone" data-category="globalUnicast">グローバルユニキャスト
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="linkLocalUnicastZone" data-category="linkLocalUnicast">リンクローカルユニキャスト
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="multicastZone3" data-category="multicast3">マルチキャスト
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="uniqueLocalZone4" data-category="uniqueLocal4">ユニークローカル
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page51" class="page">
+    <h2>問題 445 AAA に関するステートメントを左側から右側の対応する AAA サービスにドラッグアンドドロップします。すべてのオプションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left51">
+        <div class="draggable" draggable="true" id="item445_1" data-category="authentication4">ローカル、PPP、RADIUS、および TACACS+ オプションをサポートします。</div>
+        <div class="draggable" draggable="true" id="item445_2" data-category="accounting6">ユーザーが使用しているサービスを追跡します。</div>
+        <div class="draggable" draggable="true" id="item445_3" data-category="accounting6">ユーザーが消費したネットワークリソースの量を記録します。</div>
+        <div class="draggable" draggable="true" id="item445_4" data-category="">ユーザーごとの属性を割り当てます。</div>
+        <div class="draggable" draggable="true" id="item445_5" data-category="authentication4">ログイン試行を許可および拒否します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="accountingZone6" data-category="accounting6">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authenticationZone4" data-category="authentication4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page52" class="page">
+    <h2>問題 448 エンジニアは、/24 サブネット上のユーザーのワイヤレス LAN 接続に対してネットワークパラメータが有効であることを確認する必要があります。左側の値を右側のネットワークパラメータにドラッグアンドドロップします。すべての値が使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left52">
+        <div class="draggable" draggable="true" id="item448_1" data-category="defaultGateway2">192.168.1.1</div>
+        <div class="draggable" draggable="true" id="item448_2" data-category="hostIPAddress2">192.168.1.20</div>
+        <div class="draggable" draggable="true" id="item448_3" data-category="lastAssignable2">192.168.1.254</div>
+        <div class="draggable" draggable="true" id="item448_4" data-category="broadcastAddress2">192.168.1.255</div>
+        <div class="draggable" draggable="true" id="item448_5" data-category="MACAddress2">B8-76-3F-7C-57-DF</div>
+        <div class="draggable" draggable="true" id="item448_6" data-category="">1A-76-3F-7C-57-DF</div>
+        <div class="draggable" draggable="true" id="item448_7" data-category="networkAddress">192.168.1.0</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="broadcastAddressZone2" data-category="broadcastAddress2">ブロードキャストアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="defaultGatewayZone2" data-category="defaultGateway2">デフォルトゲートウェイ
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="hostIPAddressZone2" data-category="hostIPAddress2">ホストの IP アドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="lastAssignableZone2" data-category="lastAssignable2">サブネット内で最後に割り当て可能な IP アドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="MACAddressZone2" data-category="MACAddress2">MAC アドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="networkAddressZone" data-category="networkAddress">ネットワークアドレス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page53" class="page">
+    <h2>問題 449 左側のネットワーキングに関する記述を、右側の対応するネットワーキングタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left53">
+        <div class="draggable" draggable="true" id="item449_1" data-category="traditionalNetworking3">このタイプは、各デバイスで個別に変更を実装します。</div>
+        <div class="draggable" draggable="true" id="item449_2" data-category="controllerBasedNetworking3">このタイプは、コントローラーを利用してネットワーク管理を処理します。</div>
+        <div class="draggable" draggable="true" id="item449_3" data-category="traditionalNetworking3">メンテナンスコストは、他のネットワークオプションよりも高くなります。</div>
+        <div class="draggable" draggable="true" id="item449_4" data-category="controllerBasedNetworking3">このタイプでは、ネットワークの一元的なビューが提供されます。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="traditionalNetworkingZone3" data-category="traditionalNetworking3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="controllerBasedNetworkingZone3" data-category="controllerBasedNetworking3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page54" class="page">
+    <h2>問題 452 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left54">
+        <div class="draggable" draggable="true" id="item452_1" data-category="multicast4">1対多の通信を提供します</div>
+        <div class="draggable" draggable="true" id="item452_2" data-category="multicast4">グループに送信されたユニキャストソースがある</div>
+        <div class="draggable" draggable="true" id="item452_3" data-category="globalUnicastAddress6">ルーティングプレフィックスの集約を有効にします</div>
+        <div class="draggable" draggable="true" id="item452_4" data-category="globalUnicastAddress6">ルーティング可能であり、インターネット経由で到達可能である</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="globalUnicastAddressZone6" data-category="globalUnicastAddress6">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="multicastZone4" data-category="multicast4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page55" class="page">
+    <h2>問題 468 IPv6 アドレスの詳細を左側から右側の対応するタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left55">
+        <div class="draggable" draggable="true" id="item468_1" data-category="unicast">IPv6 デバイス上のインターフェイスを識別します</div>
+        <div class="draggable" draggable="true" id="item468_2" data-category="unicast">リンクローカルアドレスとループバックアドレスを含む</div>
+        <div class="draggable" draggable="true" id="item468_3" data-category="anycast2">1対多の通信を提供します</div>
+        <div class="draggable" draggable="true" id="item468_4" data-category="anycast2">非ホストデバイスによって排他的に使用される</div>
+        <div class="draggable" draggable="true" id="item468_5" data-category="multicast5">複数のインターフェイスに割り当てられる</div>
+        <div class="draggable" draggable="true" id="item468_6" data-category="multicast5">FF00::/8 アドレス範囲から派生</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="anycastZone2" data-category="anycast2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="multicastZone5" data-category="multicast5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="unicastZone" data-category="unicast">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page56" class="page">
+    <h2>問題 487 ネットワークに関する説明を左側から右側の対応するネットワークの種類にドラッグアンドドロップします。すべてのステートメントが使用されているわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left56">
+        <div class="draggable" draggable="true" id="item487_1" data-category="traditionalNetworking4">このタイプでは、複数のデバイスにわたって一貫した構成が展開されます。</div>
+        <div class="draggable" draggable="true" id="item487_2" data-category="controllerBasedNetworking4">分散型コントロールプレーンが必要です。</div>
+        <div class="draggable" draggable="true" id="item487_3" data-category="traditionalNetworking4">このタイプには分散管理プレーンが必要です。</div>
+        <div class="draggable" draggable="true" id="item487_4" data-category="controllerBasedNetworking4">サウスバウンド API は構成を適用するために使用されます。</div>
+        <div class="draggable" draggable="true" id="item487_5" data-category="">ノースバウンド API はエンドデバイスと対話します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="controllerBasedNetworkingZone4" data-category="controllerBasedNetworking4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="traditionalNetworkingZone4" data-category="traditionalNetworking4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page57" class="page">
+    <h2>問題 514 ネットワークの特性を左側から右側のネットワークタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left57">
+        <div class="draggable" draggable="true" id="item514_1" data-category="controllerBasedNetworking5">ネットワークに焦点を当てた</div>
+        <div class="draggable" draggable="true" id="item514_2" data-category="traditionalNetworking5">デバイスに焦点を当てた</div>
+        <div class="draggable" draggable="true" id="item514_3" data-category="traditionalNetworking5">ユーザー入力は構成です</div>
+        <div class="draggable" draggable="true" id="item514_4" data-category="controllerBasedNetworking5">ユーザー入力はポリシーです</div>
+        <div class="draggable" draggable="true" id="item514_5" data-category="controllerBasedNetworking5">許可リストセキュリティモデルを使用する</div>
+        <div class="draggable" draggable="true" id="item514_6" data-category="traditionalNetworking5">ブロックリストセキュリティモデルを使用</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="controllerBasedNetworkingZone5" data-category="controllerBasedNetworking5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="traditionalNetworkingZone5" data-category="traditionalNetworking5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page58" class="page">
+    <h2>問題 520 Ansible 用語を左から右にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left58">
+        <div class="draggable" draggable="true" id="item520_1" data-category="controlNode">control node</div>
+        <div class="draggable" draggable="true" id="item520_2" data-category="inventory">inventory</div>
+        <div class="draggable" draggable="true" id="item520_3" data-category="managedNode">managed node</div>
+        <div class="draggable" draggable="true" id="item520_4" data-category="module">module</div>
+        <div class="draggable" draggable="true" id="item520_5" data-category="playbook">playbook</div>
+        <div class="draggable" draggable="true" id="item520_6" data-category="task">task</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="inventoryZone" data-category="inventory">YAML 形式で表現された、ターゲットデバイス上で実行するアクションのコレクション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="playbookZone" data-category="playbook">ターゲットデバイスを管理する Ansible がインストールされたデバイス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="moduleZone" data-category="module">Ansible がインストールされていない、コマンドを実行できるネットワークデバイス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="taskZone" data-category="task">1 つ以上のターゲットデバイスで実行される特定のアクション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="managedNodeZone" data-category="managedNode">実行される Python コードの単位
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="controlNodeZone" data-category="controlNode">コマンドとタスクを実行できるターゲットデバイスを定義する Ansible ファイル
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page59" class="page">
+    <h2>問題 544 脅威を軽減する手法を左側からドラッグアンドドロップして、軽減する脅威または攻撃の種類を右側に配置します。</h2>
+    <div class="container">
+      <div class="left" id="left59">
+        <div class="draggable" draggable="true" id="item544_1" data-category="bpdu2">BPDU ガード機能を設定する</div>
+        <div class="draggable" draggable="true" id="item544_2" data-category="dynamicARP2">ダイナミック ARP 検査機能を設定する</div>
+        <div class="draggable" draggable="true" id="item544_3" data-category="rootGuard2">ルートガード機能を設定する</div>
+        <div class="draggable" draggable="true" id="item544_4" data-category="vlan">VLAN アクセスコントロールリストを設定する</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="vlanZone" data-category="vlan">802.1g 二重タグ付け
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="dynamicARPZone2" data-category="dynamicARP2">ARP スプーフィング
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="rootGuardZone2" data-category="rootGuard2">不要な優れた BPDUs
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="bpduZone2" data-category="bpdu2">PortFast 対応インターフェイス上の不要な BPDU
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page60" class="page">
+    <h2>問題 545 DHCP スヌーピング用語を左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left60">
+        <div class="draggable" draggable="true" id="item545_1" data-category="dhcpServer">DHCP server</div>
+        <div class="draggable" draggable="true" id="item545_2" data-category="snoopingBinging">snooping binding database</div>
+        <div class="draggable" draggable="true" id="item545_3" data-category="spuriousDHCPserver">spurious DHCP server</div>
+        <div class="draggable" draggable="true" id="item545_4" data-category="trusted">trusted</div>
+        <div class="draggable" draggable="true" id="item545_5" data-category="untrusted">untrusted</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="snoopingBingingZone" data-category="snoopingBinging">管理ドメインにとって不明なネットワーク上のホストの残り
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="spuriousDHCPserverZone" data-category="spuriousDHCPserver">IP アドレスをネットワーク上のホストに伝達するネットワークコンポーネント
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="trustedZone" data-category="trusted">ネットワーク管理者の制御下にある内部デバイス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="dhcpServerZone" data-category="dhcpServer">管理ドメイン内の不明な DHCP サーバー
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="untrustedZone" data-category="untrusted">すべてのインターフェースのデフォルト状態
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page61" class="page">
+    <h2>問題 546 AAA 機能を左側から右側の対応する AAA セキュリティサービスにドラッグアンドドロップします。すべてのオプションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left61">
+        <div class="draggable" draggable="true" id="item546_1" data-category="">これにより、デバイスがユーザーまたはグループベースのアクセスを許可できるようになります。</div>
+        <div class="draggable" draggable="true" id="item546_2" data-category="authorization7">RADIUS サーバーを利用して、ユーザーにリバース Telnet セッションへのアクセスを許可します。</div>
+        <div class="draggable" draggable="true" id="item546_3" data-category="authentication5">ユーザーがリモート サーバー上のネットワークにアクセスした時間を記録します。</div>
+        <div class="draggable" draggable="true" id="item546_4" data-category="authorization7">ユーザーが実行できる CLI コマンドを制限します。</div>
+        <div class="draggable" draggable="true" id="item546_5" data-category="authentication5">TACACS+ を使用して、ネットワーク管理者が入力した設定コマンドを記録します。</div>
+        <div class="draggable" draggable="true" id="item546_6" data-category="">デバイスへのアクセスを許可する前にユーザーを検証します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="authenticationZone5" data-category="authentication5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="authorizationZone7" data-category="authorization7">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page62" class="page">
+    <h2>問題 551 デバイスの動作を左側から右側の対応する HSRP スレートにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left62">
+        <div class="draggable" draggable="true" id="item551_1" data-category="learn">隣接デバイスからのメッセージを受信し、Hello パケットを受信しています</div>
+        <div class="draggable" draggable="true" id="item551_2" data-category="active">パケットを転送しています</div>
+        <div class="draggable" draggable="true" id="item551_3" data-category="standby">現在パケットを転送しているデバイスに障害が発生した場合でも、パケットを転送する準備ができています</div>
+        <div class="draggable" draggable="true" id="item551_4" data-category="speak">hello パケットを送受信しています</div>
+        <div class="draggable" draggable="true" id="item551_5" data-category="listen">隣接デバイスからの連絡を待っています</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="active" data-category="active">Active
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="learn" data-category="learn">Learn
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="listen" data-category="listen">Listen
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="speak" data-category="speak">Speak
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="standby" data-category="standby">Standby
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page63" class="page">
+    <h2>問題 555 REST ベースの API で使用される HTTP メソッドを左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left63">
+        <div class="draggable" draggable="true" id="item555_1" data-category="delete">DELETE</div>
+        <div class="draggable" draggable="true" id="item555_2" data-category="get">GET</div>
+        <div class="draggable" draggable="true" id="item555_3" data-category="post">POST</div>
+        <div class="draggable" draggable="true" id="item555_4" data-category="patch">PATCH</div>
+        <div class="draggable" draggable="true" id="item555_5" data-category="put">PUT</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="postZone" data-category="post">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="deleteZone" data-category="delete">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="patchZone" data-category="patch">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="putZone" data-category="put">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="getZoneZone" data-category="get">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page64" class="page">
+    <h2>問題 568 SNMP マネージャーとエージェント識別子のコマンドを左側から右側の関数にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left64">
+        <div class="draggable" draggable="true" id="item568_1" data-category="snmpChassis">show snmp chassis</div>
+        <div class="draggable" draggable="true" id="item568_2" data-category="snmpCommunity">show snmp community</div>
+        <div class="draggable" draggable="true" id="item568_3" data-category="snmpEngineID">show snmp engineID</div>
+        <div class="draggable" draggable="true" id="item568_4" data-category="snmpGroup">show snmp group</div>
+        <div class="draggable" draggable="true" id="item568_5" data-category="snmpHost">show snmp host</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="snmpHost" data-category="snmpHost">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="snmpEngineID" data-category="snmpEngineID">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="snmpGroup" data-category="snmpGroup">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="snmpCommunity" data-category="snmpCommunity">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="snmpChassis" data-category="snmpChassis">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page65" class="page">
+    <h2>問題 589 セキュリティプログラムの要素を左側から右側の対応する説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left65">
+        <div class="draggable" draggable="true" id="item589_1" data-category="awareness">awareness</div>
+        <div class="draggable" draggable="true" id="item589_2" data-category="education">education</div>
+        <div class="draggable" draggable="true" id="item589_3" data-category="securityPolicy">security policy</div>
+        <div class="draggable" draggable="true" id="item589_4" data-category="securityStandard">security standard</div>
+        <div class="draggable" draggable="true" id="item589_5" data-category="training">training</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="securityStandardZone" data-category="securityStandard">組織のセキュリティ目標と実践、および組織担当者の役割と責任を概説する文書
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="securityPolicyZone" data-category="securityPolicy">セキュリティを維持するための特定のタスクと方法を定めた戦術文書
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="educationZone" data-category="education">ユーザーの仕事で通常必要とされる内容を超えたトピックや実践についての学習に焦点を当てたユーザー認識学習レベル
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="awarenessZone" data-category="awareness">すべての従業員が理解し、実施する必要があるセキュリティ慣行に焦点を当てたユーザー認識学習レベル
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="trainingZone" data-category="training">従業員に業務上特に必要なタスクの実行方法を教えることに重点を置いたユーザー認識学習レベル
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page66" class="page">
+    <h2>問題 595 TCP または UDP の詳細を左側から右側の対応するプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left66">
+        <div class="draggable" draggable="true" id="item595_1" data-category="udp4">データチャネルを必要とせず、パケットに含まれるデータに基づいて送信される</div>
+        <div class="draggable" draggable="true" id="item595_2" data-category="udp4">ベストエフォート型のサービスを提供します</div>
+        <div class="draggable" draggable="true" id="item595_3" data-category="tcp4">パケットを送信する前にクライアントとサーバーが接続を確立する必要があります</div>
+        <div class="draggable" draggable="true" id="item595_4" data-category="tcp4">信頼性の高いデータ伝送をサポート</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="tcpZone4" data-category="tcp4">TCP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="udpZone4" data-category="udp4">UDP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page67" class="page">
+    <h2>問題 599 左の私からのネットワークに関する記述を、右の対応するネットワークタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left67">
+        <div class="draggable" draggable="true" id="item599_1" data-category="traditionalNetworking6">このタイプは、各デバイスで個別に変更を実装します。</div>
+        <div class="draggable" draggable="true" id="item599_2" data-category="controllerBasedNetworking6">このタイプは、コントローラーを利用してネットワーク管理を処理します。</div>
+        <div class="draggable" draggable="true" id="item599_3" data-category="traditionalNetworking6">メンテナンスコストは、他のネットワークオプションよりも高くなります。</div>
+        <div class="draggable" draggable="true" id="item599_4" data-category="controllerBasedNetworking6">このタイプでは、ネットワークの一元的なビューが提供されます。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="traditionalNetworkingZone6" data-category="traditionalNetworking6">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="controllerBasedNetworkingZone6" data-category="controllerBasedNetworking6">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page68" class="page">
+    <h2>問題 615 左側の説明を、右側の正しい構成管理テクノロジーにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left68">
+        <div class="draggable" draggable="true" id="item615_1" data-category="puppet">基本的な構成要素はマニフェストに保存されます</div>
+        <div class="draggable" draggable="true" id="item615_2" data-category="chef">設定プッシュジョブに TCP ポート 10002 を使用します</div>
+        <div class="draggable" draggable="true" id="item615_3" data-category="chef">基本的な構成要素に Ruby を使用</div>
+        <div class="draggable" draggable="true" id="item615_4" data-category="ansible">リモートデバイス通信に SSH を使用する</div>
+        <div class="draggable" draggable="true" id="item615_5" data-category="puppet">通信に TCP 8140 を使用します</div>
+        <div class="draggable" draggable="true" id="item615_6" data-category="ansible">基本的な構成要素に YAML を使用します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="ansibleZone" data-category="ansible">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="chefZone" data-category="chef">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="puppetZone" data-category="puppet">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page69" class="page">
+    <h2>問題 618 DNS ルックアップコンポーネントを左側から右側の関数にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left69">
+        <div class="draggable" draggable="true" id="item618_1" data-category="cache">cache</div>
+        <div class="draggable" draggable="true" id="item618_2" data-category="dns">DNS</div>
+        <div class="draggable" draggable="true" id="item618_3" data-category="domain">domain</div>
+        <div class="draggable" draggable="true" id="item618_4" data-category="nameResolver">name resolver</div>
+        <div class="draggable" draggable="true" id="item618_5" data-category="noIpDomainLookup">no ip domain-lookup</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="nameResolverZone" data-category="nameResolver">名前解決のパフォーマンスを向上させるアドレスマッピングのローカルデータベース
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cacheZone" data-category="cache">ホスト名を IP アドレスにマッピングするサービス
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="noIpDomainLookupZone" data-category="noIpDomainLookup">Cisco デバイス上の DNS サービスを無効にします
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="dnsZone" data-category="dns">クライアントのリクエストに応じて、ネームサーバーに IP アドレス情報を問い合わせます
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="domainZone" data-category="domain">場所または組織の種類を示す URL のコンポーネント
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page70" class="page">
+    <h2>問題 652 AAA レルムを左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left70">
+        <div class="draggable" draggable="true" id="item652_1" data-category="cat652_1">accounting</div>
+        <div class="draggable" draggable="true" id="item652_2" data-category="cat652_4">authentication</div>
+        <div class="draggable" draggable="true" id="item652_3" data-category="cat652_3">authorization</div>
+        <div class="draggable" draggable="true" id="item652_4" data-category="cat652_2">CoA</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat652_1_zone" data-category="cat652_1">アクティビティを追跡する
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat652_2_zone" data-category="cat652_2">セッション属性を更新します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat652_3_zone" data-category="cat652_3">アクセス権を検証します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat652_4_zone" data-category="cat652_4">身元を確認します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page71" class="page">
+    <h2>問題 653 宛先 IP を左側からパスにドラッグアンドドロップして、右側の宛先に到達します。</h2>
+    <div class="container">
+      <div class="left" id="left71">
+        <div class="draggable" draggable="true" id="item653_1" data-category="cat653_6">1.1.1.1</div>
+        <div class="draggable" draggable="true" id="item653_2" data-category="cat653_1">10.10.13.126</div>
+        <div class="draggable" draggable="true" id="item653_3" data-category="cat653_2">10.10.13.129</div>
+        <div class="draggable" draggable="true" id="item653_4" data-category="cat653_3">10.10.13.150</div>
+        <div class="draggable" draggable="true" id="item653_5" data-category="cat653_4">10.10.13.209</div>
+        <div class="draggable" draggable="true" id="item653_6" data-category="cat653_5">209.165.200.30</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat653_1_zone" data-category="cat653_1">Router2
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat653_2_zone" data-category="cat653_2">Router3
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat653_3_zone" data-category="cat653_3">Router4
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat653_4_zone" data-category="cat653_4">Router5
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat653_5_zone" data-category="cat653_5">Internet cloud
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat653_6_zone" data-category="cat653_6">MPLS cloud
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page72" class="page">
+    <h2>問題 656 左側の QoS 用語を右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left72">
+        <div class="draggable" draggable="true" id="item656_1" data-category="cat656_5">クラスベースの重み付け均等化キューイング</div>
+        <div class="draggable" draggable="true" id="item656_2" data-category="cat656_1">分類</div>
+        <div class="draggable" draggable="true" id="item656_3" data-category="cat656_4">混雑</div>
+        <div class="draggable" draggable="true" id="item656_4" data-category="cat656_3">ポリシング</div>
+        <div class="draggable" draggable="true" id="item656_5" data-category="cat656_2">シェーピング</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat656_1_zone" data-category="cat656_1">トラフィック記述子の値に基づいてパケットを分類します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat656_2_zone" data-category="cat656_2">インターフェイスが輻輳している場合に、特定のトラフィッククラスに対して最小帯域幅を保証します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat656_3_zone" data-category="cat656_3">アウトバウンドトラフィックの流れを減らすことで混雑を防止します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat656_4_zone" data-category="cat656_4">過剰利用の結果
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat656_5_zone" data-category="cat656_5">定義された基準を使用して、1 つ以上のクラスのトラフィックの送信を制限します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page73" class="page">
+    <h2>問題 658 左側のネットワーキングに関する記述を、右側の対応するネットワーキングタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left73">
+        <div class="draggable" draggable="true" id="item658_1" data-category="cat658_2">このタイプでは、ネットワークの動作方法とネットワークの構成方法をより適切に制御できます。</div>
+        <div class="draggable" draggable="true" id="item658_2" data-category="cat658_2">このタイプでは、API を介してネットワークをアプリケーションと統合できます。</div>
+        <div class="draggable" draggable="true" id="item658_3" data-category="cat658_1">新しいデバイスは物理インフラストラクチャを使用して構成されます。</div>
+        <div class="draggable" draggable="true" id="item658_4" data-category="cat658_1">このタイプは、集中管理された場所からリソースをプロビジョニングします。</div>
+        <div class="draggable" draggable="true" id="item658_5" data-category="cat658_2">このタイプには分散型コントロールプレーンが必要です。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat658_1_zone" data-category="cat658_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat658_2_zone" data-category="cat658_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page74" class="page">
+    <h2>問題 684 TCP または UDP の詳細を左側から右側の対応するプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left74">
+        <div class="draggable" draggable="true" id="item684_1" data-category="cat684_1">デバイス間でファイルを確実に共有するために使用されます</div>
+        <div class="draggable" draggable="true" id="item684_2" data-category="cat684_2">遅延を最小限に抑えたストリーミング操作に適しています</div>
+        <div class="draggable" draggable="true" id="item684_3" data-category="cat684_2">ベストエフォート型のサービスを提供します</div>
+        <div class="draggable" draggable="true" id="item684_4" data-category="cat684_1">信頼性の高いデータ伝送をサポート</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat684_1_zone" data-category="cat684_1">TCP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat684_2_zone" data-category="cat684_2">UDP
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page75" class="page">
+    <h2>問題 690 左側の攻撃軽減手法を右側の軽減する攻撃の種類にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left75">
+        <div class="draggable" draggable="true" id="item690_1" data-category="cat690_2">802.1x 認証を構成する</div>
+        <div class="draggable" draggable="true" id="item690_2" data-category="cat690_3">DHCPスヌーピングを設定する</div>
+        <div class="draggable" draggable="true" id="item690_3" data-category="cat690_1">デフォルト以外の VLAN ID を使用してネイティブ VLAN を構成する</div>
+        <div class="draggable" draggable="true" id="item690_4" data-category="cat690_4">DTP を無効にする</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat690_1_zone" data-category="cat690_1">802.14 二重タグ VLAN ホッピング攻撃
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat690_2_zone" data-category="cat690_2">MAC フラッディング攻撃
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat690_3_zone" data-category="cat690_3">中間者なりすまし攻撃
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat690_4_zone" data-category="cat690_4">スイッチスプーフィング VLAN ホッピング攻撃
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page76" class="page">
+    <h2>問題 691 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left76">
+        <div class="draggable" draggable="true" id="item691_1" data-category="cat691_2">1対1のコミュニケーションを提供します</div>
+        <div class="draggable" draggable="true" id="item691_2" data-category="cat691_2">単一のリンクに限定される</div>
+        <div class="draggable" draggable="true" id="item691_3" data-category="cat691_1">ネクストホップアドレスとして機能します</div>
+        <div class="draggable" draggable="true" id="item691_4" data-category="cat691_1">ルーティング可能であり、インターネット経由で到達可能です</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat691_1_zone" data-category="cat691_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat691_2_zone" data-category="chef">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page77" class="page">
+    <h2>問題 692 デバイス管理テクノロジーの各特性を左から右の展開タイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left77">
+        <div class="draggable" draggable="true" id="item692_1" data-category="cat692_2">デバイスごとの管理に依存する</div>
+        <div class="draggable" draggable="true" id="item692_2" data-category="cat692_2">個別のソフトウェア管理を使用する</div>
+        <div class="draggable" draggable="true" id="item692_3" data-category="cat692_2">バックグラウンドのデバイス構成を調整します</div>
+        <div class="draggable" draggable="true" id="item692_4" data-category="cat692_1">オープン API をサポート</div>
+        <div class="draggable" draggable="true" id="item692_5" data-category="cat692_1">カスタムおよび非標準構成に対する柔軟性が向上します。</div>
+        <div class="draggable" draggable="true" id="item692_6" data-category="cat692_1">一元的なソフトウェア管理をサポート</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat692_1_zone" data-category="cat692_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat692_2_zone" data-category="cat692_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page78" class="page">
+    <h2>問題 720 IPv6 アドレスを左側から右側の対応するアドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left78">
+        <div class="draggable" draggable="true" id="item720_1" data-category="cat720_1">2001:db8:600d:cafe::123</div>
+        <div class="draggable" draggable="true" id="item720_2" data-category="cat720_4">fcba:926a:e6e:7a25:b1:c6d2:1a76:8fdc</div>
+        <div class="draggable" draggable="true" id="item720_3" data-category="cat720_2">fe80::a00:27ff:feeb:89aa</div>
+        <div class="draggable" draggable="true" id="item720_4" data-category="cat720_3">ff05::1:3</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat720_1_zone" data-category="cat720_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat720_2_zone" data-category="cat720_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat720_3_zone" data-category="cat720_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat720_4_zone" data-category="cat720_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page79" class="page">
+    <h2>問題 723 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left79">
+        <div class="draggable" draggable="true" id="item723_1" data-category="cat723_1">ルーティングプレフィックスの集約を有効にします</div>
+        <div class="draggable" draggable="true" id="item723_2" data-category="cat723_1">1対1のコミュニケーションを提供します</div>
+        <div class="draggable" draggable="true" id="item723_3" data-category="cat723_2">1対多の通信を提供します</div>
+        <div class="draggable" draggable="true" id="item723_4" data-category="cat723_2">単一のアドレスではなくグループアドレスにパケットを送信します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat723_1_zone" data-category="cat723_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat723_2_zone" data-category="cat723_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page80" class="page">
+    <h2>問題 739 IPv4 ネットワークサブネットを左側から右側の使用可能な正しいホスト範囲にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left80">
+        <div class="draggable" draggable="true" id="item739_1" data-category="cat739_5">172.28.228.144/18</div>
+        <div class="draggable" draggable="true" id="item739_2" data-category="cat739_2">172.28.228.144/21</div>
+        <div class="draggable" draggable="true" id="item739_3" data-category="cat739_1">172.28.228.144/23</div>
+        <div class="draggable" draggable="true" id="item739_4" data-category="cat739_3">172.28.228.144/25</div>
+        <div class="draggable" draggable="true" id="item739_5" data-category="cat739_4">172.28.228.144/29</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat739_1_zone" data-category="cat739_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat739_2_zone" data-category="cat739_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat739_3_zone" data-category="cat739_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat739_4_zone" data-category="cat739_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat739_5_zone" data-category="cat739_5">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page81" class="page">
+    <h2>問題 750 TCP/IP プロトコルを左側から右側のプライマリ伝送プロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left81">
+        <div class="draggable" draggable="true" id="item750_1" data-category="cat750_1">DNS</div>
+        <div class="draggable" draggable="true" id="item750_2" data-category="cat750_2">HTTP</div>
+        <div class="draggable" draggable="true" id="item750_3" data-category="cat750_2">RTP</div>
+        <div class="draggable" draggable="true" id="item750_4" data-category="cat750_1">SMTP</div>
+        <div class="draggable" draggable="true" id="item750_5" data-category="cat750_1">SNMP</div>
+        <div class="draggable" draggable="true" id="item750_6" data-category="cat750_2">Telnet</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat750_1_zone" data-category="cat750_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat750_2_zone" data-category="cat750_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page82" class="page">
+    <h2>問題 751 SNMP コンポーネントを左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left82">
+        <div class="draggable" draggable="true" id="item751_1" data-category="cat751_1">MIB</div>
+        <div class="draggable" draggable="true" id="item751_2" data-category="cat751_4">SNMP エージェント</div>
+        <div class="draggable" draggable="true" id="item751_3" data-category="cat751_2">SNMP マネージャー</div>
+        <div class="draggable" draggable="true" id="item751_4" data-category="cat751_3">SNMP トラップ</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat751_1_zone" data-category="cat751_1">監視できる変数のコレクション
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat751_2_zone" data-category="cat751_2">未承諾メッセージ
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat751_3_zone" data-category="cat751_3">ステータス要求とデバイスに関する情報の要求に応答します
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat751_4_zone" data-category="cat751_4">NMS 上に存在する
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page83" class="page">
+    <h2>問題 753 左側の IP プロトコル送信の説明を、右側の IP トラフィックタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left83">
+        <div class="draggable" draggable="true" id="item753_1" data-category="cat753_1">送信を順番に送信します</div>
+        <div class="draggable" draggable="true" id="item753_2" data-category="cat753_2">送信には 8 バイトのヘッダーが含まれます</div>
+        <div class="draggable" draggable="true" id="item753_3" data-category="cat753_1">パケットをストリームとして送信します</div>
+        <div class="draggable" draggable="true" id="item753_4" data-category="cat753_2">パケットを個別に送信する</div>
+        <div class="draggable" draggable="true" id="item753_5" data-category="cat753_2">遅延の影響を受けやすいアプリケーションをサポートするために、より高い伝送速度を使用します</div>
+        <div class="draggable" draggable="true" id="item753_6" data-category="cat753_1">信頼性を確保するために低い伝送速度を使用します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat753_1_zone" data-category="cat753_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat753_2_zone" data-category="cat753_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page84" class="page">
+    <h2>問題 760 ネットワークエンジニアが OSPFv2 ネイバー隣接関係を設定しています。パラメータを左側から右側の必要なカテゴリにドラッグアンドドロップします。すべてのパラメータが使用されているわけではありません</h2>
+    <div class="container">
+      <div class="left" id="left84">
+        <div class="draggable" draggable="true" id="item760_1" data-category="cat760_2">netmask</div>
+        <div class="draggable" draggable="true" id="item760_2" data-category="">OSPF process ID</div>
+        <div class="draggable" draggable="true" id="item760_3" data-category="cat760_1">router ID</div>
+        <div class="draggable" draggable="true" id="item760_4" data-category="cat760_1">IP address</div>
+        <div class="draggable" draggable="true" id="item760_5" data-category="cat760_2">area ID</div>
+        <div class="draggable" draggable="true" id="item760_6" data-category="cat760_2">timers</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat760_1_zone" data-category="cat760_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat760_2_zone" data-category="cat760_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page85" class="page">
+    <h2>問題 777 管理接続タイプを左側から右側の定義にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left85">
+        <div class="draggable" draggable="true" id="item777_1" data-category="cat777_3">console</div>
+        <div class="draggable" draggable="true" id="item777_2" data-category="cat777_4">HTTPS</div>
+        <div class="draggable" draggable="true" id="item777_3" data-category="cat777_2">SSH</div>
+        <div class="draggable" draggable="true" id="item777_4" data-category="cat777_1">Telnet</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat777_1_zone" data-category="cat777_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat777_2_zone" data-category="cat777_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat777_3_zone" data-category="cat777_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat777_4_zone" data-category="cat777_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page86" class="page">
+    <h2>問題 798 DNS コマンドを左側から右側の効果にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left86">
+        <div class="draggable" draggable="true" id="item798_1" data-category="cat798_2">ip domain-lookup</div>
+        <div class="draggable" draggable="true" id="item798_2" data-category="cat798_1">ip domain-name</div>
+        <div class="draggable" draggable="true" id="item798_3" data-category="cat798_4">ip host switch_1 192.168.0.1</div>
+        <div class="draggable" draggable="true" id="item798_4" data-category="cat798_5">ip name-server</div>
+        <div class="draggable" draggable="true" id="item798_5" data-category="cat798_3">show hosts</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat798_1_zone" data-category="cat798_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat798_2_zone" data-category="cat798_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat798_3_zone" data-category="cat798_3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat798_4_zone" data-category="cat798_4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat798_5_zone" data-category="cat798_5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page87" class="page">
+    <h2>問題 809 デバイス管理テクノロジーのユースケースを左から対応するものにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left87">
+        <div class="draggable" draggable="true" id="item809_1" data-category="cat809_1">オーバーレイとアンダーレイの構成</div>
+        <div class="draggable" draggable="true" id="item809_2" data-category="cat809_1">ルーテッドアクセスの展開</div>
+        <div class="draggable" draggable="true" id="item809_3" data-category="cat809_1">STP 展開</div>
+        <div class="draggable" draggable="true" id="item809_4" data-category="cat809_2">VLAN と HSRP の設定</div>
+        <div class="draggable" draggable="true" id="item809_5" data-category="cat809_2">VXLAN と LISP の構成</div>
+        <div class="draggable" draggable="true" id="item809_6" data-category="cat809_2">コンソール経由の設定</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat809_1_zone" data-category="cat809_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat809_2_zone" data-category="cat809_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page88" class="page">
+    <h2>問題 811 トランスポート層プロトコルの特性を左側から右側の対応するプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left88">
+        <div class="draggable" draggable="true" id="item811_1" data-category="cat811_1">パケット配信を保証します</div>
+        <div class="draggable" draggable="true" id="item811_2" data-category="cat811_1">32 ビットのシーケンス番号を使用します</div>
+        <div class="draggable" draggable="true" id="item811_3" data-category="cat811_2">音声トラフィックに最適</div>
+        <div class="draggable" draggable="true" id="item811_4" data-category="cat811_1">失われたパケットの再送信のサポートを提供します</div>
+        <div class="draggable" draggable="true" id="item811_5" data-category="cat811_2">パケット内のオーバーヘッドを最小限に抑えます</div>
+        <div class="draggable" draggable="true" id="item811_6" data-category="cat811_2">必要なコンピュータリソースが少なくて済む</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat811_1_zone" data-category="cat811_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat811_2_zone" data-category="cat811_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page89" class="page">
+    <h2>問題 824 左側の説明を右側の構成管理テクノロジーにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left89">
+        <div class="draggable" draggable="true" id="item824_1" data-category="cat824_3">基本的な構成要素はマニフェストに保存されます</div>
+        <div class="draggable" draggable="true" id="item824_2" data-category="cat824_2">設定プッシュジョブに TCP ポート 10002 を使用します</div>
+        <div class="draggable" draggable="true" id="item824_3" data-category="cat824_2">基本的な構成要素に Ruby を使用</div>
+        <div class="draggable" draggable="true" id="item824_4" data-category="cat824_1">リモートデバイス通信に SSH を使用する</div>
+        <div class="draggable" draggable="true" id="item824_5" data-category="cat824_3">通信に TCP 8140 を使用します</div>
+        <div class="draggable" draggable="true" id="item824_6" data-category="cat824_1">基本的な構成要素に YAML を使用します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat824_1_zone" data-category="cat824_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat824_2_zone" data-category="cat824_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat824_3_zone" data-category="cat824_3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page90" class="page">
+    <h2>問題 834 ワイヤレスアーキテクチャに関する事実を左側から右側のアクセスポイントの種類にドラッグアンドドロップします。すべてのオプションが使用されるわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left90">
+        <div class="draggable" draggable="true" id="item834_1" data-category="cat834_2">自動展開をサポート</div>
+        <div class="draggable" draggable="true" id="item834_2" data-category="">Web ベースのダッシュボードから管理</div>
+        <div class="draggable" draggable="true" id="item834_3" data-category="cat834_1">Telnet、SSH、または Web GUI 経由で管理にアクセス可能</div>
+        <div class="draggable" draggable="true" id="item834_4" data-category="cat834_1">WLC によって設定および管理される</div>
+        <div class="draggable" draggable="true" id="item834_5" data-category="cat834_2">管理 IP アドレスが必要です</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat834_1_zone" data-category="cat834_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat834_2_zone" data-category="cat834_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page91" class="page">
+    <h2>問題 863 関数を左側から右側の正しいネットワークコンポーネントにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left91">
+        <div class="draggable" draggable="true" id="item863_1" data-category="cat863_1">クライアントに配布される TCP/IP 設定を保持します</div>
+        <div class="draggable" draggable="true" id="item863_2" data-category="cat863_2">Web URL を IP アドレスに解決します</div>
+        <div class="draggable" draggable="true" id="item863_3" data-category="cat863_2">名前にマッピングされた IP アドレスのリストを保存します</div>
+        <div class="draggable" draggable="true" id="item863_4" data-category="cat863_1">デフォルトゲートウェイをクライアントに割り当てます</div>
+        <div class="draggable" draggable="true" id="item863_5" data-category="cat863_1">有効なクライアントに IP アドレスを割り当てます</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat863_1_zone" data-category="cat863_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat863_2_zone" data-category="cat863_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page92" class="page">
+    <h2>問題 867 左側のサブネットマスクを右側の対応するサブネットにドラッグアンドドロップします。すべてのサブネットマスクが使用されているわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left92">
+        <div class="draggable" draggable="true" id="item867_1" data-category="">255.255.248.0</div>
+        <div class="draggable" draggable="true" id="item867_2" data-category="cat867_1">255.255.255.128</div>
+        <div class="draggable" draggable="true" id="item867_3" data-category="">255.255.255.224</div>
+        <div class="draggable" draggable="true" id="item867_4" data-category="cat867_2">255.255.255.240</div>
+        <div class="draggable" draggable="true" id="item867_5" data-category="cat867_3">255.255.255.248</div>
+        <div class="draggable" draggable="true" id="item867_6" data-category="cat867_4">255.255.255.252</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat867_1_zone" data-category="cat867_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat867_2_zone" data-category="cat867_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat867_3_zone" data-category="cat867_3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat867_4_zone" data-category="cat867_4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page93" class="page">
+    <h2>問題 876 Cisco IOS の攻撃緩和機能を左側から右側の緩和するネットワーク攻撃のタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left93">
+        <div class="draggable" draggable="true" id="item876_1" data-category="cat876_4">DHCP スヌーピング</div>
+        <div class="draggable" draggable="true" id="item876_2" data-category="cat876_2">動的 ARP 検査</div>
+        <div class="draggable" draggable="true" id="item876_3" data-category="cat876_1">IP ソースガード</div>
+        <div class="draggable" draggable="true" id="item876_4" data-category="cat876_3">ストームコントロール</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat876_1_zone" data-category="cat876_1">IP 構成を偽装する不正なサーバー
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat876_2_zone" data-category="cat876_2">キャッシュポイズニング
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat876_3_zone" data-category="cat876_3">洪水攻撃
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat876_4_zone" data-category="cat876_4">ネットワーク上の不正なクライアント
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page94" class="page">
+    <h2>問題 886 IP プロトコル送信の説明を左側から右側の IP トラフィックタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left94">
+        <div class="draggable" draggable="true" id="item886_1" data-category="cat886_1">送信を順番に送信します</div>
+        <div class="draggable" draggable="true" id="item886_2" data-category="cat886_2">送信には 8 バイトのヘッダーが含まれます</div>
+        <div class="draggable" draggable="true" id="item886_3" data-category="cat886_1">パケットをストリームとして送信します</div>
+        <div class="draggable" draggable="true" id="item886_4" data-category="cat886_2">パケットを個別に送信する</div>
+        <div class="draggable" draggable="true" id="item886_5" data-category="cat886_2">遅延の影響を受けやすいアプリケーションをサポートするために、より高い伝送速度を使用します</div>
+        <div class="draggable" draggable="true" id="item886_6" data-category="cat886_1">信頼性を確保するために低い伝送速度を使用します</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat886_1_zone" data-category="cat886_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat886_2_zone" data-category="cat886_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page95" class="page">
+    <h2>問題 887 示されているように、Router1 ルーティングテーブルには、10.10.10.0/24 に到達するための複数の方法があります。デフォルトのアドミニストレーティブディスタンスが使用されます。左側のネットワーク条件を、右側の Router1 が使用するルーティングメソッドにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left95">
+        <div class="draggable" draggable="true" id="item887_1" data-category="cat887_1">すべてのプロトコルが稼働しています。</div>
+        <div class="draggable" draggable="true" id="item887_2" data-category="cat887_1">OSPF と eBGP がダウンしています。</div>
+        <div class="draggable" draggable="true" id="item887_3" data-category="cat887_3">スタティックルートと eBGP がダウンしています。</div>
+        <div class="draggable" draggable="true" id="item887_4" data-category="cat887_2">スタティックルートと EIGRP がダウンしています。</div>
+        <div class="draggable" draggable="true" id="item887_5" data-category="cat887_3">スタティックルートと OSPF がダウンしています。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat887_1_zone" data-category="cat887_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat887_2_zone" data-category="cat887_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat887_3_zone" data-category="cat887_3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page96" class="page">
+    <h2>問題 893 標準の DNS ルックアップ操作の手順を左から右の順序にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left96">
+        <div class="draggable" draggable="true" id="item893_1" data-category="cat893_1">エンドポイントは、ドメイン名の IP アドレスのリクエストを送信します。</div>
+        <div class="draggable" draggable="true" id="item893_2" data-category="cat893_4">DNS はドメイン DNS サーバーから応答を受け取ります。</div>
+        <div class="draggable" draggable="true" id="item893_3" data-category="cat893_5">DNS がエンドポイントに応答します。</div>
+        <div class="draggable" draggable="true" id="item893_4" data-category="cat893_3">DNS はルート DNS サーバーにリクエストを送信します。</div>
+        <div class="draggable" draggable="true" id="item893_5" data-category="cat893_2">DNS はドメイン DNS サーバーにリクエストを送信します。</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat893_1_zone" data-category="cat893_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat893_2_zone" data-category="cat893_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat893_3_zone" data-category="cat893_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat893_4_zone" data-category="cat893_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat893_5_zone" data-category="cat893_5">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page97" class="page">
+    <h2>問題 897 802.11 ワイヤレス規格を左側から右側の対応するステートメントにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left97">
+        <div class="draggable" draggable="true" id="item897_1" data-category="cat897_5">802.11a</div>
+        <div class="draggable" draggable="true" id="item897_2" data-category="cat897_3">802.11ac</div>
+        <div class="draggable" draggable="true" id="item897_3" data-category="cat897_4">802.11b</div>
+        <div class="draggable" draggable="true" id="item897_4" data-category="cat897_2">802.11g</div>
+        <div class="draggable" draggable="true" id="item897_5" data-category="cat897_1">802.11n</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat897_1_zone" data-category="cat897_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat897_2_zone" data-category="cat897_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat897_3_zone" data-category="cat897_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat897_4_zone" data-category="cat897_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat897_5_zone" data-category="cat897_5">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page98" class="page">
+    <h2>問題 900 特性を左側から右側の IPv6 アドレスタイプにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left98">
+        <div class="draggable" draggable="true" id="item900_1" data-category="cat900_1">送信元アドレスとしては使用できません</div>
+        <div class="draggable" draggable="true" id="item900_2" data-category="cat900_1">単一のアドレスではなくグループアドレスにパケットを送信します</div>
+        <div class="draggable" draggable="true" id="item900_3" data-category="cat900_2">単一のリンクに限定される</div>
+        <div class="draggable" draggable="true" id="item900_4" data-category="cat900_2">すべての IPv6 デバイスで必須</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat900_1_zone" data-category="cat900_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat900_2_zone" data-category="cat900_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page99" class="page">
+    <h2>問題 908 エンジニアは、ローカルユーザデータベースがすでに設定されているルータで enable コマンドの暗号化されたパスワードを設定しています。設定コマンドを左側から右側の正しい順序にドラッグアンドドロップします。すべてのコマンドが使用されているわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left99">
+        <div class="draggable" draggable="true" id="item908_1" data-category="cat908_2">configure terminal</div>
+        <div class="draggable" draggable="true" id="item908_2" data-category="cat908_1">enable</div>
+        <div class="draggable" draggable="true" id="item908_3" data-category="cat908_3">enable secret shft@4fs</div>
+        <div class="draggable" draggable="true" id="item908_4" data-category="">exit</div>
+        <div class="draggable" draggable="true" id="item908_5" data-category="cat908_4">line vty 0 4</div>
+        <div class="draggable" draggable="true" id="item908_6" data-category="">service password-encryption</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat908_1_zone" data-category="cat908_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat908_2_zone" data-category="cat908_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat908_3_zone" data-category="cat908_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat908_4_zone" data-category="cat908_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page100" class="page">
+    <h2>問題 912 アプリケーションプロトコルを左側から、右側で使用するトランスポートプロトコルにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left100">
+        <div class="draggable" draggable="true" id="item912_1" data-category="cat912_2">DHCP</div>
+        <div class="draggable" draggable="true" id="item912_2" data-category="cat912_1">FTP</div>
+        <div class="draggable" draggable="true" id="item912_3" data-category="cat912_1">SMTP</div>
+        <div class="draggable" draggable="true" id="item912_4" data-category="cat912_1">SSH</div>
+        <div class="draggable" draggable="true" id="item912_5" data-category="cat912_2">SNMP</div>
+        <div class="draggable" draggable="true" id="item912_6" data-category="cat912_2">TFTP</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat912_1_zone" data-category="cat912_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat912_2_zone" data-category="cat912_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page101" class="page">
+    <h2>問題 914 左側の構成管理用語を右側の説明にドラッグアンドドロップします。すべての用語が使用されているわけではありません。</h2>
+    <div class="container">
+      <div class="left" id="left101">
+        <div class="draggable" draggable="true" id="item914_1" data-category="cat914_3">agent</div>
+        <div class="draggable" draggable="true" id="item914_2" data-category="cat914_4">agentless</div>
+        <div class="draggable" draggable="true" id="item914_3" data-category="cat914_5">provision</div>
+        <div class="draggable" draggable="true" id="item914_4" data-category="cat914_1">pull</div>
+        <div class="draggable" draggable="true" id="item914_5" data-category="cat914_2">push</div>
+        <div class="draggable" draggable="true" id="item914_6" data-category="">post</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat914_1_zone" data-category="cat914_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat914_2_zone" data-category="cat914_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat914_3_zone" data-category="cat914_3">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat914_4_zone" data-category="cat914_4">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat914_5_zone" data-category="cat914_5">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page102" class="page">
+    <h2>問題 922 左側の QoS 輻輳管理用語を右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left102">
+        <div class="draggable" draggable="true" id="item922_1" data-category="cat922_2">CBWGQ</div>
+        <div class="draggable" draggable="true" id="item922_2" data-category="cat922_5">CQ</div>
+        <div class="draggable" draggable="true" id="item922_3" data-category="cat922_3">FIFO</div>
+        <div class="draggable" draggable="true" id="item922_4" data-category="cat922_4">PQ</div>
+        <div class="draggable" draggable="true" id="item922_5" data-category="cat922_1">WFQ</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat922_1_zone" data-category="cat922_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat922_2_zone" data-category="cat922_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat922_3_zone" data-category="cat922_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat922_4_zone" data-category="cat922_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat922_5_zone" data-category="cat922_5">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page103" class="page">
+    <h2>問題 924 HTTP の REST API 呼び出しメソッドを左側から右側のアクションにドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left103">
+        <div class="draggable" draggable="true" id="item924_1" data-category="cat924_3">DELETE</div>
+        <div class="draggable" draggable="true" id="item924_2" data-category="cat924_2">GET</div>
+        <div class="draggable" draggable="true" id="item924_3" data-category="cat924_1">POST</div>
+        <div class="draggable" draggable="true" id="item924_4" data-category="cat924_4">PUT</div>
+        <div class="draggable" draggable="true" id="item924_5" data-category="">PATCH</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat924_1_zone" data-category="cat924_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat924_2_zone" data-category="cat924_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat924_3_zone" data-category="cat924_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat924_4_zone" data-category="cat924_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page104" class="page">
+    <h2>問題 925 AAA 用語を左側から右側の説明にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left104">
+        <div class="draggable" draggable="true" id="item925_1" data-category="cat925_1">アカウンティング</div>
+        <div class="draggable" draggable="true" id="item925_2" data-category="cat925_4">認証</div>
+        <div class="draggable" draggable="true" id="item925_3" data-category="cat925_3">認可</div>
+        <div class="draggable" draggable="true" id="item925_4" data-category="cat925_2">CoA</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat925_1_zone" data-category="cat925_1">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat925_2_zone" data-category="cat925_2">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat925_3_zone" data-category="cat925_3">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat925_4_zone" data-category="cat925_4">
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page105" class="page">
+    <h2>問題 970 IPv6 アドレスタイプの特性を左から右にドラッグアンドドロップします。</h2>
+    <div class="container">
+      <div class="left" id="left105">
+        <div class="draggable" draggable="true" id="item970_1" data-category="cat970_2">単一のサブネットに接続されている</div>
+        <div class="draggable" draggable="true" id="item970_2" data-category="cat970_1">プレフィックス FC00::/7 のアドレス</div>
+        <div class="draggable" draggable="true" id="item970_3" data-category="cat970_2">インターフェイスごとに 1 回だけ構成されます</div>
+        <div class="draggable" draggable="true" id="item970_4" data-category="cat970_1">インターネットルーティングを行わずに内部で専用に使用するアドレス指定</div>
+      </div>
+      <div class="right">
+        <div class="dropzone" id="cat970_1_zone" data-category="cat970_1">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+        <div class="dropzone" id="cat970_2_zone" data-category="cat970_2">
+          <div class="slot"></div>
+          <div class="slot"></div>
+          <div class="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    const totalPages = 103;
+
+    // ページの切り替え
+    function showPage(page) {
+      for (let i = 1; i <= totalPages; i++) {
+        const pageDiv = document.getElementById(`page${i}`);
+        if (i === page) {
+          pageDiv.classList.add("active");
+        } else {
+          pageDiv.classList.remove("active");
+        }
+      }
+    }
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+      }
+    });
+
+    // ドラッグ＆ドロップのロジック
+    const draggables = document.querySelectorAll(".draggable");
+    const dropzones = document.querySelectorAll(".dropzone");
+
+    draggables.forEach((draggable) => {
+      draggable.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("text", e.target.id);
+      });
+    });
+
+    dropzones.forEach((dropzone) => {
+      const slots = dropzone.querySelectorAll(".slot");
+      dropzone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+      });
+
+      dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        const data = e.dataTransfer.getData("text");
+        const item = document.getElementById(data);
+        const category = item.getAttribute("data-category");
+        const correctCategory = dropzone.getAttribute("data-category");
+
+        const resultElement = dropzone.querySelector(".result");
+        if (category === correctCategory) {
+          resultElement.textContent = "正解！";
+          resultElement.style.color = "green";
+          resultElement.style.display = "block";
+        } else {
+          resultElement.textContent = "不正解";
+          resultElement.style.color = "red";
+          resultElement.style.display = "block";
+          return;
+        }
+
+        const availableSlot = Array.from(slots).find(
+          (slot) => slot.childElementCount === 0
+        );
+        if (availableSlot) {
+          availableSlot.appendChild(item);
+          saveToLocalStorage(dropzone.id, item.id);  // ローカルストレージに保存
+        } else {
+          alert("スロットがすでに満杯です！");
+        }
+      });
+    });
+
+    // ローカルストレージに保存する関数
+    function saveToLocalStorage(dropzoneId, itemId) {
+      let savedItems = JSON.parse(localStorage.getItem("droppedItems")) || {};
+      if (!savedItems[dropzoneId]) {
+        savedItems[dropzoneId] = [];
+      }
+      savedItems[dropzoneId].push(itemId);
+      localStorage.setItem("droppedItems", JSON.stringify(savedItems));
+    }
+
+    // ローカルストレージから復元する関数
+    function restoreFromLocalStorage() {
+      let savedItems = JSON.parse(localStorage.getItem("droppedItems")) || {};
+      for (let dropzoneId in savedItems) {
+        let dropzone = document.getElementById(dropzoneId);
+        let slots = dropzone.querySelectorAll(".slot");
+        savedItems[dropzoneId].forEach((itemId, index) => {
+          const item = document.getElementById(itemId);
+          if (slots[index]) {
+            slots[index].appendChild(item);
+          }
+        });
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", restoreFromLocalStorage); // ページ読み込み時に復元
+
+    // リセットボタンの処理
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      localStorage.removeItem("droppedItems"); // ローカルストレージをクリア
+      document.querySelectorAll(".draggable").forEach((item) => { // 各ページのドロップゾーンからアイテムを元の位置に戻す
+        const category = item.getAttribute("data-category");
+        const itemId = item.id;
+        if (item.parentNode.classList.contains("slot")) { // アイテムがすでにドロップされていた場合に元の位置に戻す
+          if (category === "puppet") {
+            document.getElementById("left1").appendChild(item); // ページ1に戻す
+          } else if (category === "chef") {
+            // chefカテゴリのアイテムがどのページに所属するかで分岐
+            if (itemId === "item2") {
+              document.getElementById("left1").appendChild(item); // ページ1に戻す
+            } else if (itemId === "item3") {
+              document.getElementById("left2").appendChild(item); // ページ2に戻す
+            }
+          } else if (category === "ansible") {
+            document.getElementById("left2").appendChild(item); // ページ2に戻す
+          }
+        }
+      });
+
+      // ドロップゾーンのスロットをクリア
+      document.querySelectorAll(".slot").forEach((slot) => {
+        while (slot.firstChild) {
+          slot.removeChild(slot.firstChild);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
