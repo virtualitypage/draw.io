@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.2">
   <diagram name="ページ1" id="Zo1WjbqABF_xzE2NxIOl">
-    <mxGraphModel dx="2842" dy="1126" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1978" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,6 +10,17 @@
         <mxCell id="QWaBHHsbd7KOMMApe-6u-1" value="192.168.0.0/24" style="swimlane;startSize=20;horizontal=1;containerType=tree;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fillStyle=auto;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;labelBackgroundColor=none;labelBorderColor=none;rounded=1;container=0;" parent="QWaBHHsbd7KOMMApe-6u-146" vertex="1">
           <mxGeometry width="450" height="240" as="geometry">
             <mxRectangle x="30" y="520" width="120" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-27" value="" style="elbow=horizontal;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=classic;endArrow=classic;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;labelBorderColor=none;startFill=1;endFill=1;" edge="1" parent="QWaBHHsbd7KOMMApe-6u-1" source="QWaBHHsbd7KOMMApe-6u-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="96.5" y="107" as="sourcePoint" />
+            <mxPoint x="96.5" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-28" value="CONSOLE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" vertex="1" connectable="0" parent="u_4x-8XvFpc8--7nfBTp-27">
+          <mxGeometry x="-0.0939" relative="1" as="geometry">
+            <mxPoint y="2" as="offset" />
           </mxGeometry>
         </mxCell>
         <UserObject label="&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;BL1500HM&lt;/font&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;&lt;font style=&quot;vertical-align: inherit;&quot;&gt;192.168.0.1&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" treeRoot="1" id="QWaBHHsbd7KOMMApe-6u-38">
@@ -42,7 +53,7 @@
             <mxPoint x="-9" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QWaBHHsbd7KOMMApe-6u-45" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=classic;endArrow=classic;rounded=1;curved=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;labelBorderColor=none;startFill=1;endFill=1;" parent="QWaBHHsbd7KOMMApe-6u-146" source="QWaBHHsbd7KOMMApe-6u-44" target="QWaBHHsbd7KOMMApe-6u-38" edge="1">
+        <mxCell id="QWaBHHsbd7KOMMApe-6u-45" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=classic;endArrow=classic;rounded=1;curved=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;labelBorderColor=none;startFill=1;endFill=1;dashed=1;" parent="QWaBHHsbd7KOMMApe-6u-146" source="QWaBHHsbd7KOMMApe-6u-44" target="QWaBHHsbd7KOMMApe-6u-38" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="40" y="33" as="sourcePoint" />
             <mxPoint x="204" y="85" as="targetPoint" />
@@ -51,7 +62,7 @@
         </mxCell>
         <mxCell id="QWaBHHsbd7KOMMApe-6u-145" value="&amp;nbsp;WLAN&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="QWaBHHsbd7KOMMApe-6u-45" vertex="1" connectable="0">
           <mxGeometry x="-0.0939" relative="1" as="geometry">
-            <mxPoint x="9" as="offset" />
+            <mxPoint x="4" as="offset" />
           </mxGeometry>
         </mxCell>
         <UserObject label="FortiGate 50E&lt;div&gt;192.168.0.10&lt;/div&gt;" treeRoot="1" id="QWaBHHsbd7KOMMApe-6u-36">
@@ -59,7 +70,7 @@
             <mxGeometry x="36.5" y="159.99785276073624" width="121" height="45.55" as="geometry" />
           </mxCell>
         </UserObject>
-        <mxCell id="QWaBHHsbd7KOMMApe-6u-44" value="iMac (TFTPサーバ)&lt;div&gt;192.168.0.5&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;verticalAlign=middle;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;labelBorderColor=none;rounded=1;" parent="QWaBHHsbd7KOMMApe-6u-146" vertex="1">
+        <mxCell id="QWaBHHsbd7KOMMApe-6u-44" value="iMac (TFTP Server)&lt;div&gt;192.168.0.5&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=center;verticalAlign=middle;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};fontFamily=Helvetica;fontSize=12;labelBackgroundColor=none;labelBorderColor=none;rounded=1;" parent="QWaBHHsbd7KOMMApe-6u-146" vertex="1">
           <mxGeometry x="34" y="62.55000000000007" width="126" height="44.45" as="geometry" />
         </mxCell>
         <mxCell id="QWaBHHsbd7KOMMApe-6u-147" value="Port 5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="1" vertex="1" connectable="0">
@@ -132,6 +143,34 @@
         <mxCell id="u_4x-8XvFpc8--7nfBTp-25" value="WAN1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" vertex="1" connectable="0" parent="1">
           <mxGeometry x="-519.9996319018403" y="555" as="geometry">
             <mxPoint x="-103" y="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-30" value="Internet" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="91" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-31" value="" style="elbow=horizontal;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=classic;endArrow=classic;rounded=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;labelBorderColor=none;startFill=1;endFill=1;dashed=1;" edge="1" parent="1" source="QWaBHHsbd7KOMMApe-6u-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-370" y="124.35" as="sourcePoint" />
+            <mxPoint x="-300" y="125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-33" value="WAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="u_4x-8XvFpc8--7nfBTp-31">
+          <mxGeometry x="-0.7345" y="3" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-34" value="Internet" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="410" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-35" value="" style="elbow=horizontal;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;startArrow=classic;endArrow=classic;rounded=1;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;labelBackgroundColor=none;labelBorderColor=none;startFill=1;endFill=1;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-386" y="444" as="sourcePoint" />
+            <mxPoint x="-300" y="444" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="u_4x-8XvFpc8--7nfBTp-36" value="WAN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="u_4x-8XvFpc8--7nfBTp-35">
+          <mxGeometry x="-0.7345" y="3" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
