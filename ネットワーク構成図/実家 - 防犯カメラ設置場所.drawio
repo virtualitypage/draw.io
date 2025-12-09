@@ -10,9 +10,6 @@
         <mxCell id="aUFvrdOmghKy86Jjlq5B-10" parent="1" style="whiteSpace=wrap;html=1;strokeColor=none;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=default;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
           <mxGeometry height="670" width="1147.46" x="123.54" y="1840" as="geometry" />
         </mxCell>
-        <mxCell id="cAVRYhhCSUy4OZDruDIZ-231" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;container=0;" value="" vertex="1">
-          <mxGeometry height="374" width="30" x="619" y="1964" as="geometry" />
-        </mxCell>
         <mxCell id="cAVRYhhCSUy4OZDruDIZ-221" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=none;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#CCCCCC;container=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
           <mxGeometry height="468.07" width="410.73" x="128.56" y="2411.93" as="geometry" />
         </mxCell>
@@ -542,7 +539,7 @@
           <mxGeometry height="110.64" width="10" x="172.85" y="2128.7200000000003" as="geometry" />
         </mxCell>
         <mxCell id="aUFvrdOmghKy86Jjlq5B-8" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#000000;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#FF3333;rotation=160;gradientColor=none;fillStyle=auto;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="" vertex="1">
-          <mxGeometry height="17" width="31.63" x="559" y="2360" as="geometry" />
+          <mxGeometry height="17" width="30.37" x="559.63" y="2360" as="geometry" />
         </mxCell>
         <mxCell id="aUFvrdOmghKy86Jjlq5B-9" connectable="0" parent="1" style="group;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="" vertex="1">
           <mxGeometry height="54.414999999999964" width="53.164999999999964" x="597.005" y="2179.005" as="geometry" />
@@ -574,7 +571,7 @@
         <mxCell id="aUFvrdOmghKy86Jjlq5B-25" parent="1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.wall;fillColor=strokeColor;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;container=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;rotation=-90;" value="" vertex="1">
           <mxGeometry height="10" width="97.82" x="486.09" y="2827.35" as="geometry" />
         </mxCell>
-        <mxCell id="aUFvrdOmghKy86Jjlq5B-27" collapsed="1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="候補① 玄関前" vertex="1">
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-27" collapsed="1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillColor=#80FF00;" value="候補① 玄関前" vertex="1">
           <mxGeometry height="30" width="120" x="409.25" y="2368" as="geometry" />
         </mxCell>
         <mxCell id="aUFvrdOmghKy86Jjlq5B-28" edge="1" parent="1" source="aUFvrdOmghKy86Jjlq5B-8" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=0.956;exitY=0.518;exitDx=0;exitDy=0;exitPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" target="aUFvrdOmghKy86Jjlq5B-27" value="">
@@ -653,6 +650,50 @@
         </mxCell>
         <mxCell id="aUFvrdOmghKy86Jjlq5B-64" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#000000;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.hard_disk;fontFamily=Helvetica;fontSize=12;fontColor=default;rotation=90;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
           <mxGeometry height="20" width="12" x="1014.44" y="2139.51" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-68" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#000000;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#FF3333;rotation=15;gradientColor=none;fillStyle=auto;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="" vertex="1">
+          <mxGeometry height="17" width="30.37" x="1029.3899999999999" y="2863.93" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-69" collapsed="1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillColor=#80FF00;" value="候補③ 東門前" vertex="1">
+          <mxGeometry height="30" width="120" x="879.01" y="2871.93" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-70" edge="1" parent="1" source="aUFvrdOmghKy86Jjlq5B-68" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=-0.009;exitY=0.515;exitDx=0;exitDy=0;exitPerimeter=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="aUFvrdOmghKy86Jjlq5B-69" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1024.8600000000001" y="2898.93" />
+            </Array>
+            <mxPoint x="1022.1" y="2901.93" as="sourcePoint" />
+            <mxPoint x="989.1" y="2911.93" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-71" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#000000;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#FF3333;rotation=-30;gradientColor=none;fillStyle=auto;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="" vertex="1">
+          <mxGeometry height="17" width="30.37" x="550.0999999999999" y="2846.93" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-72" collapsed="1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillColor=#80FF00;" value="候補② 中庭" vertex="1">
+          <mxGeometry height="30" width="110" x="628.48" y="2810" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-73" edge="1" parent="1" source="aUFvrdOmghKy86Jjlq5B-72" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=1.007;entryY=0.564;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" target="aUFvrdOmghKy86Jjlq5B-71">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-74" parent="1" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#000000;shadow=0;dashed=0;shape=mxgraph.ios7.icons.video_conversation;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#FF3333;rotation=-210;gradientColor=none;fillStyle=auto;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="" vertex="1">
+          <mxGeometry height="17" width="30.37" x="486.08999999999986" y="2901.93" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-81" edge="1" parent="1" source="aUFvrdOmghKy86Jjlq5B-78" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0.957;entryY=0.59;entryDx=0;entryDy=0;entryPerimeter=0;" target="aUFvrdOmghKy86Jjlq5B-74" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-78" collapsed="1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillColor=#80FF00;" value="候補④ 畑" vertex="1">
+          <mxGeometry height="30" width="100" x="324.05" y="2918.93" as="geometry" />
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-83" edge="1" parent="1" source="aUFvrdOmghKy86Jjlq5B-82" style="edgeStyle=entityRelationEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fontFamily=Helvetica;fontSize=12;fontColor=default;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="624" y="2206" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="aUFvrdOmghKy86Jjlq5B-82" collapsed="1" parent="1" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};fontStyle=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fillColor=#80FF00;" value="モニター" vertex="1">
+          <mxGeometry height="30" width="70.37" x="520.92" y="2239.36" as="geometry" />
+        </mxCell>
+        <mxCell id="cAVRYhhCSUy4OZDruDIZ-231" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=top;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=none;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;container=0;" value="" vertex="1">
+          <mxGeometry height="374" width="30" x="619" y="1964" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
