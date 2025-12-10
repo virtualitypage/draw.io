@@ -698,8 +698,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="防犯カメラ - 配線図" id="S9y-vxXokFgT0lw4wiAY">
-    <mxGraphModel dx="2166" dy="32" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+  <diagram name="防犯カメラ - 物理配線図" id="S9y-vxXokFgT0lw4wiAY">
+    <mxGraphModel dx="1877" dy="-199" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="CMg4669NUvDH6TxS_z-A-0" />
         <mxCell id="CMg4669NUvDH6TxS_z-A-1" parent="CMg4669NUvDH6TxS_z-A-0" />
@@ -1471,7 +1471,7 @@
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-59" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" style="endArrow=blockThin;html=1;rounded=0;strokeColor=#FF00FF;startArrow=blockThin;startFill=1;endFill=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1041" y="2160" />
+              <mxPoint x="1041" y="2164" />
               <mxPoint x="1041" y="2128" />
               <mxPoint x="662" y="2128" />
               <mxPoint x="662" y="2124" />
@@ -1480,11 +1480,11 @@
               <mxPoint x="647" y="2185" />
               <mxPoint x="635" y="2185" />
             </Array>
-            <mxPoint x="1025" y="2163" as="sourcePoint" />
+            <mxPoint x="1025" y="2167" as="sourcePoint" />
             <mxPoint x="634.42" y="2196.01" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UUK_vLF4BoUbYsC4SUlY-64" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" source="UUK_vLF4BoUbYsC4SUlY-10" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FF3333;entryX=0.5;entryY=0.34;entryDx=0;entryDy=0;entryPerimeter=0;" target="CMg4669NUvDH6TxS_z-A-211" value="">
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-64" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" source="UUK_vLF4BoUbYsC4SUlY-10" style="endArrow=blockThin;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FF3333;entryX=0.5;entryY=0.34;entryDx=0;entryDy=0;entryPerimeter=0;endFill=1;" target="CMg4669NUvDH6TxS_z-A-211" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
               <mxPoint x="1052" y="2166" />
@@ -1496,17 +1496,14 @@
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-66" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" style="endArrow=blockThin;html=1;rounded=0;strokeColor=#FF00FF;endFill=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
-              <mxPoint x="1041" y="2174" />
+              <mxPoint x="1041.03" y="2177.94" />
             </Array>
             <mxPoint x="1041" y="2160" as="sourcePoint" />
-            <mxPoint x="1025" y="2177" as="targetPoint" />
+            <mxPoint x="1025.03" y="2180.94" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="CMg4669NUvDH6TxS_z-A-211" parent="CMg4669NUvDH6TxS_z-A-1" style="points=[[0.03,0.36,0],[0.18,0,0],[0.5,0.34,0],[0.82,0,0],[0.97,0.36,0],[1,0.67,0],[0.975,0.975,0],[0.5,1,0],[0.025,0.975,0],[0,0.67,0]];verticalLabelPosition=bottom;sketch=0;html=1;verticalAlign=top;aspect=fixed;align=center;pointerEvents=1;shape=mxgraph.cisco19.wireless_access_point2;fillColor=#f5f5f5;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#333333;rotation=90;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="" vertex="1">
-          <mxGeometry height="21.89" width="21.89" x="1010.2099999999999" y="2159.11" as="geometry" />
-        </mxCell>
-        <mxCell id="UUK_vLF4BoUbYsC4SUlY-10" parent="CMg4669NUvDH6TxS_z-A-1" style="perimeter=ellipsePerimeter;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.instruments.oscilloscope;fillColor=#FFFF00;" value="" vertex="1">
-          <mxGeometry height="14" width="22" x="1041.03" y="2142" as="geometry" />
+          <mxGeometry height="21.89" width="21.89" x="1010.2399999999999" y="2163.05" as="geometry" />
         </mxCell>
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-67" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" style="endArrow=blockThin;html=1;rounded=0;strokeColor=#FF00FF;endFill=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
@@ -1526,6 +1523,28 @@
         </mxCell>
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-72" parent="CMg4669NUvDH6TxS_z-A-1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.wall;fillColor=strokeColor;strokeColor=default;fontFamily=Helvetica;fontSize=12;fontColor=default;container=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;rotation=-90;" value="" vertex="1">
           <mxGeometry height="10" width="396.43" x="-70.7" y="2683.83" as="geometry" />
+        </mxCell>
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-76" connectable="0" parent="CMg4669NUvDH6TxS_z-A-1" style="group" value="" vertex="1">
+          <mxGeometry height="16.5" width="16.5" x="990" y="2143.68" as="geometry" />
+        </mxCell>
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-74" parent="UUK_vLF4BoUbYsC4SUlY-76" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#B3B3B3;" value="" vertex="1">
+          <mxGeometry height="16.5" width="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-75" parent="UUK_vLF4BoUbYsC4SUlY-76" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.webicons.google;gradientColor=#DFDEDE;strokeColor=#000000;rotation=90;strokeWidth=1;shadow=0;gradientDirection=north;" value="" vertex="1">
+          <mxGeometry height="10.91" width="12.42" x="2.0449999999998454" y="2.7950000000000728" as="geometry" />
+        </mxCell>
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-77" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" source="UUK_vLF4BoUbYsC4SUlY-10" style="endArrow=blockThin;html=1;rounded=0;exitX=0.145;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FF3333;endFill=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="2160" />
+              <mxPoint x="1020" y="2160" />
+            </Array>
+            <mxPoint x="1032.1299999999999" y="2141.51" as="sourcePoint" />
+            <mxPoint x="1005" y="2158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-10" parent="CMg4669NUvDH6TxS_z-A-1" style="perimeter=ellipsePerimeter;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.instruments.oscilloscope;fillColor=#FFFF00;" value="" vertex="1">
+          <mxGeometry height="14" width="22" x="1041.03" y="2142" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
