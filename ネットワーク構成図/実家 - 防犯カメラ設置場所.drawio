@@ -699,7 +699,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="防犯カメラ - 物理配線図" id="S9y-vxXokFgT0lw4wiAY">
-    <mxGraphModel dx="2560" dy="347" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1408" dy="-574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="CMg4669NUvDH6TxS_z-A-0" />
         <mxCell id="CMg4669NUvDH6TxS_z-A-1" parent="CMg4669NUvDH6TxS_z-A-0" />
@@ -1563,6 +1563,9 @@
         </mxCell>
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-78" parent="CMg4669NUvDH6TxS_z-A-1" style="perimeter=ellipsePerimeter;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.instruments.oscilloscope;fillColor=#FFFF00;" value="" vertex="1">
           <mxGeometry height="14" width="22" x="348" y="2388.03" as="geometry" />
+        </mxCell>
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-86" parent="CMg4669NUvDH6TxS_z-A-1" style="perimeter=ellipsePerimeter;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.instruments.oscilloscope;fillColor=#FFFF00;" value="" vertex="1">
+          <mxGeometry height="14" width="22" x="102.54" y="1884.8500000000001" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
