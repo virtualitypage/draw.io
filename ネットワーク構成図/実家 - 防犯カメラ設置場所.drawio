@@ -699,7 +699,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="防犯カメラ - 物理配線図" id="S9y-vxXokFgT0lw4wiAY">
-    <mxGraphModel dx="3286" dy="-268" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1003" dy="-1189" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="CMg4669NUvDH6TxS_z-A-0" />
         <mxCell id="CMg4669NUvDH6TxS_z-A-1" parent="CMg4669NUvDH6TxS_z-A-0" />
@@ -1375,17 +1375,6 @@
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-40" parent="CMg4669NUvDH6TxS_z-A-1" style="perimeter=ellipsePerimeter;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.instruments.oscilloscope;fillColor=#FFFF00;" value="" vertex="1">
           <mxGeometry height="14" width="22" x="800.4300000000001" y="1841" as="geometry" />
         </mxCell>
-        <mxCell id="UUK_vLF4BoUbYsC4SUlY-95" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" source="UUK_vLF4BoUbYsC4SUlY-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF3333;entryX=0.36;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;" target="CMg4669NUvDH6TxS_z-A-223" value="">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="544" y="2326" />
-              <mxPoint x="544" y="2352" />
-              <mxPoint x="594" y="2352" />
-              <mxPoint x="594" y="2533" />
-            </Array>
-            <mxPoint x="567" y="2528" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="UUK_vLF4BoUbYsC4SUlY-14" parent="CMg4669NUvDH6TxS_z-A-1" style="perimeter=ellipsePerimeter;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.instruments.oscilloscope;fillColor=#FFFF00;" value="" vertex="1">
           <mxGeometry height="14" width="22" x="657.3699999999999" y="2142" as="geometry" />
         </mxCell>
@@ -1542,7 +1531,7 @@
             <mxPoint x="1025.03" y="2180.94" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="UUK_vLF4BoUbYsC4SUlY-59" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" style="endArrow=blockThin;html=1;rounded=0;strokeColor=#FF00FF;startArrow=blockThin;startFill=1;endFill=1;" value="">
+        <mxCell id="UUK_vLF4BoUbYsC4SUlY-59" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" style="endArrow=blockThin;html=1;rounded=0;strokeColor=#FF00FF;startArrow=blockThin;startFill=1;endFill=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <Array as="points">
               <mxPoint x="1041" y="2164" />
