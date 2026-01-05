@@ -699,7 +699,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="防犯カメラ - 物理配線図" id="S9y-vxXokFgT0lw4wiAY">
-    <mxGraphModel dx="1825" dy="-651" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1694" dy="-726" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="CMg4669NUvDH6TxS_z-A-0" />
         <mxCell id="CMg4669NUvDH6TxS_z-A-1" parent="CMg4669NUvDH6TxS_z-A-0" />
@@ -1528,9 +1528,6 @@
             <mxPoint x="177" y="2281" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="lx3bZwXzEqoKG8LEcSzG-8" parent="CMg4669NUvDH6TxS_z-A-1" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#000000;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.switch;rotation=90;" value="" vertex="1">
-          <mxGeometry height="11.03" width="33.89" x="612.86" y="2268.57" as="geometry" />
-        </mxCell>
         <mxCell id="CMg4669NUvDH6TxS_z-A-222" parent="CMg4669NUvDH6TxS_z-A-1" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.flat_tv;strokeColor=#000000;fontFamily=Helvetica;fontSize=12;fontColor=#333333;fillColor=#f5f5f5;rotation=-195;container=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" value="" vertex="1">
           <mxGeometry height="10" width="70" x="555" y="2309.9999999999995" as="geometry" />
         </mxCell>
@@ -1610,6 +1607,18 @@
             <mxPoint x="631" y="2292" as="sourcePoint" />
             <mxPoint x="631" y="2334" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="ftHufS1eV-2s0cLKUGhc-11" edge="1" parent="CMg4669NUvDH6TxS_z-A-1" style="endArrow=none;html=1;rounded=0;strokeColor=#FF00FF;startArrow=blockThin;startFill=1;endFill=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="lx3bZwXzEqoKG8LEcSzG-8" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="2274" />
+            </Array>
+            <mxPoint x="640" y="2247" as="sourcePoint" />
+            <mxPoint x="640" y="2289" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lx3bZwXzEqoKG8LEcSzG-8" parent="CMg4669NUvDH6TxS_z-A-1" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#000000;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.switch;rotation=90;" value="" vertex="1">
+          <mxGeometry height="11.03" width="33.89" x="612.86" y="2268.57" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
