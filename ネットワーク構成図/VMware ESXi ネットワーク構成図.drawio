@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="ページ-1" id="D9XlB_TMD_-MUx1WWyKS">
-    <mxGraphModel dx="620" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="749" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,7 +34,7 @@
         <mxCell id="Ucy1ZjD5wb_D-EbqR8lm-18" parent="KYxcwjHtLG0wu8oCJr7q-30" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;autosize=1;resizable=0;fontSize=13;fontStyle=1" value="eth0 (LAN)" vertex="1">
           <mxGeometry height="30" width="90" as="geometry" />
         </mxCell>
-        <mxCell id="KYxcwjHtLG0wu8oCJr7q-29" parent="KYxcwjHtLG0wu8oCJr7q-30" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;autosize=1;resizable=0;fontSize=13;fontStyle=1" value="&lt;div&gt;172.16.0.2 /24 (Static)&lt;/div&gt;" vertex="1">
+        <mxCell id="KYxcwjHtLG0wu8oCJr7q-29" parent="KYxcwjHtLG0wu8oCJr7q-30" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;autosize=1;resizable=0;fontSize=13;fontStyle=1" value="&lt;div&gt;172.16.0.1 /24 (Static)&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="150" y="19.5" as="geometry" />
         </mxCell>
         <mxCell id="KYxcwjHtLG0wu8oCJr7q-31" connectable="0" parent="1" style="group" value="" vertex="1">
